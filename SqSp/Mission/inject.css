@@ -1,0 +1,69 @@
+body {
+  background-color: white;
+}
+#logo .logo {
+}
+#canvasWrapper #canvas .pageWrapper {
+}
+.markdown-block {
+  font-family: "Apercu", sans-serif;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 1.5em;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.markdown-block h1 {
+  font-family: "Apercu", sans-serif;
+  font-size: 4em;
+  font-weight: normal;
+  text-align: center;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+.markdown-block h1 span.unit {
+  font-family: "Apercu", sans-serif;
+  display: inline-block;
+}
+.markdown-block ul {
+  font-family: "Apercu", sans-serif;
+  padding: 0 2em;
+  list-style: none;
+}
+@media only screen and (min-width: 512px) {
+  .markdown-block ul {
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .markdown-block ul {
+    -webkit-columns: 3;
+    -moz-columns: 3;
+    columns: 3;
+  }
+}
+.markdown-block ul li {
+  font-family: "Apercu", sans-serif;
+  display: inline-block;
+  margin: 1em;
+  color: black;
+}
+.markdown-block blockquote {
+  margin: 2em;
+}
+.markdown-block blockquote p {
+  font-family: "Apercu", sans-serif;
+  border: 5px solid black;
+  padding: 2em;
+}
+.markdown-block#block-yui_3_17_2_2_1441452321572_5230 {
+  background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/5600b897e4b04a789633ba2f/1442887831871/zine-001-background-light.png');
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
