@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+	x="0px" y="0px"
+	width="640px" height="480px"
+	viewBox="0 0 640 480" enable-background="new 0 0 640 480" xml:space="preserve">
+	<g id="ecotechnoauto">
+		<polygon fill="#231F20" points="321,317 393,281 321,245 249,281"/>
+		<polygon fill="#4D4D4D" points="321,295.167 349.333,281 321,266.833 292.667,281"/>
+		<polygon fill="#224099" points="393,200 393,281 321,245 321,164"/>
+		<polygon fill="#00A551" points="321,245 249,281 249,200 321,164"/>
+	</g>
+	<g id="hut">
+		<polygon fill="#FFFFFF" points="321,252 293,238 293,265 321,279"/>
+		<polygon fill="#FFFFFF" points="321,252 349,238 349,265 321,279"/>
+		<polygon fill="#E6E6E6" points="321,213 285.833,238.167 321,257"/>
+		<polygon fill="#F2F2F2" points="321,257 321,213 356.167,238.333"/>
+	</g>
+</svg>
