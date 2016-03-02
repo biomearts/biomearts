@@ -1,0 +1,29 @@
+.code-block #social-media-icons {
+  display: block;
+  width: 400px;
+  height: 100px;
+  margin: 50px auto;
+  font-size: 0;
+}
+.code-block #social-media-icons > .smicon {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  background-position: 0 0;
+}
+.code-block #social-media-icons > .smicon:hover {
+  background-position: 0 100px;
+}
+.smicon#facebook {
+  background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/56d7123db6aa601c41c884bd/1456935485729/smicons_facebook.png');
+}
+.smicon#twitter {
+  background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/56d7124ab6aa601c41c88564/1456935498703/smicons_twitter.png');
+}
+.smicon#instagram {
+  background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/56d71248b6aa601c41c88523/1456935496100/smicons_instagram.png');
+}
+.smicon#github {
+  background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/56d71245b6aa601c41c8851b/1456935493881/smicons_github.png');
+}
