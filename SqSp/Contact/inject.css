@@ -27,3 +27,39 @@
 .smicon#github {
   background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/56d71245b6aa601c41c8851b/1456935493881/smicons_github.png');
 }
+
+.form-block {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-block label.title {
+  font-family: "Apercu", "Futura", sans-serif;
+  font-size: 24px;
+  text-align: center;
+}
+.form-block label.title > span.required {
+  display: inline-block;
+  margin-left: -0.2em;
+  opacity: 0.5;
+}
+.form-wrapper .field-list .field .field-element {
+  background: none;
+  border: none;
+  border-bottom: 3px solid black;
+}
+.form-wrapper .form-submission-text {
+  text-align: center;
+}
+.form-wrapper .form-submission-text p {
+  font-family: "Apercu", "Futura", sans-serif;
+  font-size: 24px;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
