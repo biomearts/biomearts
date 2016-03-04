@@ -59,6 +59,7 @@ input, textarea {
 
 /* specific elements */
 .social-twitter {
+  display: none;
 }
 .collection-detail-wrapper {
   display: none;

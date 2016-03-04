@@ -1,9 +1,11 @@
+/* Social media icons */
 .code-block #social-media-icons {
   display: block;
-  width: 400px;
+  max-width: 400px;
   height: 100px;
   margin: 50px auto;
   font-size: 0;
+  text-align: center;
 }
 .code-block #social-media-icons > .smicon {
   display: inline-block;
@@ -28,6 +30,7 @@
   background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/56d71245b6aa601c41c8851b/1456935493881/smicons_github.png');
 }
 
+/* Contact form */
 .form-block {
   max-width: 600px;
   margin-left: auto;
@@ -56,10 +59,58 @@
   font-size: 24px;
 }
 
-iframe {
-  border: none;
-  width: 100%;
+/* Section titles */
+.sqs-block h1 {
+  font-family: "Apercu", sans-serif;
+  font-weight: normal;
+  font-size: 48px;
+  letter-spacing: 0.05em;
+  line-height: 1.25em;
+  text-align: center;
+  margin: 2em auto 0;
+  padding: 0;
+  max-width: 10em;
+}
+
+/* Mailchimp form */
+#mc_embed_signup {
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
+}
+#mc-embedded-subscribe-form .clear {
+  text-align: center;
+}
+#mc-embedded-subscribe-form input[type="submit"] {
+  -webkit-appearance: none;
+  outline: none;
+  line-height: 1em;
+  padding: 1em 2.5em;
+  border: none;
+  color: #fff;
+  background-color: #272727;
+}
+.mc-field-group {
+  margin: 0 0 24px;
+}
+.mc-field-group label {
+  display: block;
+  text-align: center;
+  font-family: "Apercu", "Futura", sans-serif;
+  font-size: 24px;
+  line-height: normal;
+}
+.mc-field-group input {
+  box-sizing: border-box;
+  width: 100%;
+  background: none;
+  margin: 6px 0 4px;
+  border: none;
+  border-bottom: 3px solid black;
+  border-radius: 2px;
+  padding: 12px;
+}
+.mc-field-group input:focus {
+  transition: background .1s ease-in;
+  outline: none;
+  background: white;
 }
