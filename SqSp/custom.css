@@ -51,6 +51,11 @@ p, a, ul li, span, h1, h2, h3, h4, h5, h6 {
   font-family: "Input Mono", sans-serif;
   letter-spacing: 0;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Apercu", sans-serif;
+  font-weight: normal;
+  line-height: 1.25em;
+}
 input, textarea {
   font-family: "Input Mono", sans-serif !important;
   font-size: 12px !important;

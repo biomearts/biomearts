@@ -61,11 +61,7 @@
 
 /* Section titles */
 .sqs-block h1 {
-  font-family: "Apercu", sans-serif;
-  font-weight: normal;
   font-size: 48px;
-  letter-spacing: 0.05em;
-  line-height: 1.25em;
   text-align: center;
   margin: 2em auto 0;
   padding: 0;
