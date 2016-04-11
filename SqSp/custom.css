@@ -1,141 +1,141 @@
 @font-face {
-  font-family: 'Input Mono';
-  src:
-  	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022a3e4b0eeba8772b214/1440752291546/InputMono-Regular.eot') format('embedded-opentype'),
-    url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022c1e4b0eeba8772b23c/1440752321440/InputMono-Regular.woff') format('woff'),
-  	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022b8e4b0eeba8772b224/1440752312435/InputMono-Regular.ttf')  format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Input Mono';
+	src:
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022a3e4b0eeba8772b214/1440752291546/InputMono-Regular.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022c1e4b0eeba8772b23c/1440752321440/InputMono-Regular.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022b8e4b0eeba8772b224/1440752312435/InputMono-Regular.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Input Mono';
-  src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022dae4b0eeba8772b270/1440752346072/InputMono-Italic.eot') format('embedded-opentype'),
-  url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022e6e4b0eeba8772b289/1440752358723/InputMono-Italic.woff') format('woff'),
-  url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022efe4b0eeba8772b298/1440752367779/InputMono-Italic.ttf')  format('truetype');
-  font-weight: normal;
-  font-style: italic;
+	font-family: 'Input Mono';
+	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022dae4b0eeba8772b270/1440752346072/InputMono-Italic.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022e6e4b0eeba8772b289/1440752358723/InputMono-Italic.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022efe4b0eeba8772b298/1440752367779/InputMono-Italic.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: italic;
 }
 @font-face {
-  font-family: 'Input Mono';
-  src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022fce4b0eeba8772b2a3/1440752380141/InputMono-Bold.eot') format('embedded-opentype'),
-  url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02304e4b0eeba8772b2b1/1440752388072/InputMono-Bold.woff') format('woff'),
-  url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e0230ae4b0eeba8772b2bd/1440752394858/InputMono-Bold.ttf')  format('truetype');
-  font-weight: bold;
-  font-style: normal;
+	font-family: 'Input Mono';
+	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e022fce4b0eeba8772b2a3/1440752380141/InputMono-Bold.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02304e4b0eeba8772b2b1/1440752388072/InputMono-Bold.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e0230ae4b0eeba8772b2bd/1440752394858/InputMono-Bold.ttf')  format('truetype');
+	font-weight: bold;
+	font-style: normal;
 }
 @font-face {
-  font-family: 'Input Mono';
-  src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02313e4b0eeba8772b2ce/1440752403992/InputMono-BoldItalic.eot') format('embedded-opentype'),
-  url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e0231be4b0eeba8772b2db/1440752411758/InputMono-BoldItalic.woff') format('woff'),
-  url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02323e4b0eeba8772b2e0/1440752419352/InputMono-BoldItalic.ttf')  format('truetype');
-  font-weight: bold;
-  font-style: italic;
+	font-family: 'Input Mono';
+	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02313e4b0eeba8772b2ce/1440752403992/InputMono-BoldItalic.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e0231be4b0eeba8772b2db/1440752411758/InputMono-BoldItalic.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02323e4b0eeba8772b2e0/1440752419352/InputMono-BoldItalic.ttf')  format('truetype');
+	font-weight: bold;
+	font-style: italic;
 }
 
 @font-face {
-  font-family: 'Apercu';
-  src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02404e4b0eeba8772b459/1440752644182/Apercu-Medium.eot') format('embedded-opentype'),
-  url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e0240be4b0eeba8772b464/1440752651909/Apercu-Medium.woff') format('woff'),
-  url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02412e4b0eeba8772b46d/1440752658282/Apercu-Medium.ttf')  format('truetype');
-  font-weight: normal;
-  font-style: normal;
+	font-family: 'Apercu';
+	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02404e4b0eeba8772b459/1440752644182/Apercu-Medium.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e0240be4b0eeba8772b464/1440752651909/Apercu-Medium.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02412e4b0eeba8772b46d/1440752658282/Apercu-Medium.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: normal;
 }
 /*End of font-face declaration*/
 
 body {
-  font-family: "Input Mono", sans-serif;
-  font-size: 12px;
-  letter-spacing: 0;
+	font-family: "Input Mono", sans-serif;
+	font-size: 12px;
+	letter-spacing: 0;
 }
 p, a, ul li, span, h1, h2, h3, h4, h5, h6 {
-  font-family: "Input Mono", sans-serif;
-  letter-spacing: 0;
+	font-family: "Input Mono", sans-serif;
+	letter-spacing: 0;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Apercu", sans-serif;
-  font-weight: normal;
-  line-height: 1.25em;
+	font-family: "Apercu", sans-serif;
+	font-weight: normal;
+	line-height: 1.25em;
 }
 input, textarea {
-  font-family: "Input Mono", sans-serif !important;
-  font-size: 12px !important;
-  letter-spacing: 0 !important;
+	font-family: "Input Mono", sans-serif !important;
+	font-size: 12px !important;
+	letter-spacing: 0 !important;
 }
 
 /* specific elements */
 .social-twitter {
-  display: none;
+	display: none;
 }
 .collection-detail-wrapper {
-  display: none;
+	display: none;
 }
 html.mobile-view #mobile-navigation > ul li a,
 html.mobile-view #mobile-navigation > ul li span {
-  font-family: "Input Mono", sans-serif;
-  letter-spacing: 0;
+	font-family: "Input Mono", sans-serif;
+	letter-spacing: 0;
 }
 @media only screen and (max-height: 800px) {
-  body.collection-type-index #headerWrapper {
-    padding: 30px 30px 0;
-  }
+	body.collection-type-index #headerWrapper {
+		padding: 30px 30px 0;
+	}
 }
 body:not(.collection-type-index):not(.collection-type-gallery) #headerWrapper {
-  max-width: 1200px;
-  margin: 0 auto;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 #headerWrapper header {
-  padding-bottom: 2em;
+	padding-bottom: 2em;
 }
 #footer {
-  margin: 0;
+	margin: 0;
 }
 .code-block #the-build {
-  display: block;
-  width: 100px;
-  height: 100px;
-  margin: 50px auto 25px;
-  background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e155fce4b0e3927f7eaa1e/1440830972826/the-build.png');
-  background-size: cover;
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 50px auto 25px;
+	background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e155fce4b0e3927f7eaa1e/1440830972826/the-build.png');
+	background-size: cover;
 }
 
 /*Logo*/
 #logo {
-  width: 200px;
+	width: 200px;
 }
 #logo .logo {
-  display: block;
-  border-radius: 50%;
-  overflow: visible;
+	display: block;
+	border-radius: 50%;
+	overflow: visible;
 }
 #logo .logo a {
-  font-family: "Apercu", "Futura", sans-serif;
-  font-weight: normal;
-  font-size: 48px;
-  letter-spacing: 0.25em;
+	font-family: "Apercu", "Futura", sans-serif;
+	font-weight: normal;
+	font-size: 48px;
+	letter-spacing: 0.25em;
 }
 /*#canvas.color-weight-dark #logo .logo {
-  background: rgba(255, 255, 255, 0.25);
+background: rgba(255, 255, 255, 0.25);
 }*/
 #logo .logo-subtitle {
-  font-family: "Input Mono", sans-serif;
-  letter-spacing: 0.5em;
-  line-height: 2em;
-  width: 200px;
-  margin-top: 1em;
+	font-family: "Input Mono", sans-serif;
+	letter-spacing: 0.5em;
+	line-height: 2em;
+	width: 200px;
+	margin-top: 1em;
 }
 
 /*Nav*/
 /*Top-level items*/
 #topNav .main-nav>.nav-wrapper>ul>li>a,
 #topNav .main-nav>.nav-wrapper>ul>li.folder>.folder-parent>a {
-  font-size: 12px;
-  font-weight: normal;
+	font-size: 12px;
+	font-weight: normal;
 }
 #topNav .main-nav>.nav-wrapper>ul>li>a>span,
 #topNav .main-nav>.nav-wrapper>ul>li.folder>.folder-parent>a>span {
-  border: 2px solid transparent;
-  transition: color 0.3s, border-color 0.3s;
-  padding: 0.35em 0.5em 0.2em;
+	border: 2px solid transparent;
+	transition: color 0.3s, border-color 0.3s;
+	padding: 0.35em 0.5em 0.2em;
 }
 #topNav .main-nav>.nav-wrapper>ul>li>a:hover>span,
 #topNav .main-nav>.nav-wrapper>ul>li.active-link>a>span,
@@ -143,7 +143,7 @@ body:not(.collection-type-index):not(.collection-type-gallery) #headerWrapper {
 #topNav .main-nav>.nav-wrapper>ul>li.active-link.folder>.folder-parent>a>span,
 #mobile-navigation .active-link>a,
 #mobile-navigation .active-link label>a {
-  border-color: black;
+	border-color: black;
 }
 body.collection-type-index .color-weight-dark #topNav .main-nav>.nav-wrapper>ul>li>a:hover>span,
 body.collection-type-index .color-weight-dark #topNav .main-nav>.nav-wrapper>ul>li.active-link>a>span,
@@ -151,20 +151,21 @@ body.collection-type-index .color-weight-dark #topNav .main-nav>.nav-wrapper>ul>
 body.collection-type-index .color-weight-dark #topNav .main-nav>.nav-wrapper>ul>li.active-link.folder>.folder-parent>a>span,
 body.collection-type-index .color-weight-dark #mobile-navigation .active-link>a,
 body.collection-type-index .color-weight-dark #mobile-navigation .active-link label>a {
-  border-color: white;
+	border-color: white;
 }
 
-/*People folder*/
+/*folders*/
 #topNav .folder .folder-child-wrapper {
-  left: 0;
-  margin-left: -2.65em;
+	left: 50%;
+	margin-left: 0.5em;
+	transform: translateX(-50%);
 }
 #topNav .folder .folder-child-wrapper ul.folder-child li a {
-  width: 10em;
-  font-size: 12px;
+	width: 10em;
+	font-size: 12px;
 }
 #topNav .main-nav ul.folder-child>li>a>span {
-  border: 1px solid transparent;
-  transition: color 0.3s, border-color 0.3s;
-  padding: 0.2em 0.4em;
+	border: 1px solid transparent;
+	transition: color 0.3s, border-color 0.3s;
+	padding: 0.2em 0.4em;
 }

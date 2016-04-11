@@ -1,3 +1,5 @@
+<style>
+
 body {
   background-color: white;
 }
@@ -10,7 +12,6 @@ body {
   font-weight: normal;
   font-size: 15px;
   line-height: 1.5em;
-  width: 100%;
   padding-top: 0;
   padding-bottom: 0;
   padding-left: 0;
@@ -54,6 +55,11 @@ body {
 .markdown-block blockquote {
   margin: 2em;
 }
+@media (max-width: 500px) {
+	.markdown-block blockquote {
+	  margin: 2em 0;
+	}
+}
 .markdown-block blockquote p {
   font-family: "Apercu", sans-serif;
   border: 5px solid black;
@@ -65,3 +71,5 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
+</style>
