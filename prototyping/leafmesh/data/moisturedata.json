@@ -1,0 +1,1682 @@
+{
+    "results": [
+        {
+            "rssi": 66,
+            "_id": "5713b6a101900f0961ce2d58",
+            "moisture": 0.6989247311827957,
+            "t_utc": 1460909728,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713b7cd01900f0961ce2d59",
+            "moisture": 0.6930596285434996,
+            "t_utc": 1460910028,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713b8f901900f0961ce2d5a",
+            "moisture": 0.6891495601173021,
+            "t_utc": 1460910328,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713ba2401900f0961ce2d5b",
+            "moisture": 0.6862170087976539,
+            "t_utc": 1460910628,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5713bb5101900f0961ce2d5c",
+            "moisture": 0.6832844574780058,
+            "t_utc": 1460910928,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713bc7d01900f0961ce2d5d",
+            "moisture": 0.6813294232649071,
+            "t_utc": 1460911228,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713bda901900f0961ce2d5e",
+            "moisture": 0.6793743890518084,
+            "t_utc": 1460911528,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5713bed501900f0961ce2d5f",
+            "moisture": 0.6774193548387096,
+            "t_utc": 1460911828,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5713c00001900f0961ce2d60",
+            "moisture": 0.6754643206256109,
+            "t_utc": 1460912128,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5713c12d01900f0961ce2d61",
+            "moisture": 0.6744868035190615,
+            "t_utc": 1460912428,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713c25901900f0961ce2d62",
+            "moisture": 0.6725317693059628,
+            "t_utc": 1460912728,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713c38501900f0961ce2d63",
+            "moisture": 0.6715542521994134,
+            "t_utc": 1460913028,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713c4b101900f0961ce2d64",
+            "moisture": 0.6705767350928641,
+            "t_utc": 1460913328,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713c5dd01900f0961ce2d65",
+            "moisture": 0.6695992179863147,
+            "t_utc": 1460913628,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5713c70901900f0961ce2d66",
+            "moisture": 0.6686217008797654,
+            "t_utc": 1460913928,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713c83501900f0961ce2d67",
+            "moisture": 0.667644183773216,
+            "t_utc": 1460914228,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713c96001900f0961ce2d68",
+            "moisture": 0.6656891495601173,
+            "t_utc": 1460914528,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713ca8c01900f0961ce2d69",
+            "moisture": 0.6656891495601173,
+            "t_utc": 1460914828,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5713cbb901900f0961ce2d6a",
+            "moisture": 0.6647116324535679,
+            "t_utc": 1460915128,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713cce501900f0961ce2d6b",
+            "moisture": 0.6637341153470185,
+            "t_utc": 1460915428,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713ce1101900f0961ce2d6c",
+            "moisture": 0.6627565982404692,
+            "t_utc": 1460915728,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713cf3d01900f0961ce2d6d",
+            "moisture": 0.6627565982404692,
+            "t_utc": 1460916028,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d06801900f0961ce2d6e",
+            "moisture": 0.6617790811339198,
+            "t_utc": 1460916328,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d19501900f0961ce2d6f",
+            "moisture": 0.6608015640273704,
+            "t_utc": 1460916628,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d2c001900f0961ce2d70",
+            "moisture": 0.6598240469208211,
+            "t_utc": 1460916928,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d3ec01900f0961ce2d71",
+            "moisture": 0.6598240469208211,
+            "t_utc": 1460917228,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d51801900f0961ce2d72",
+            "moisture": 0.6588465298142717,
+            "t_utc": 1460917528,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d64401900f0961ce2d73",
+            "moisture": 0.6578690127077224,
+            "t_utc": 1460917828,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d77001900f0961ce2d74",
+            "moisture": 0.6578690127077224,
+            "t_utc": 1460918128,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d89d01900f0961ce2d75",
+            "moisture": 0.656891495601173,
+            "t_utc": 1460918428,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713d9c901900f0961ce2d76",
+            "moisture": 0.656891495601173,
+            "t_utc": 1460918728,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713daf401900f0961ce2d77",
+            "moisture": 0.6559139784946236,
+            "t_utc": 1460919028,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713dc2101900f0961ce2d78",
+            "moisture": 0.6549364613880743,
+            "t_utc": 1460919328,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713dd4c01900f0961ce2d79",
+            "moisture": 0.6549364613880743,
+            "t_utc": 1460919628,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713de7901900f0961ce2d7a",
+            "moisture": 0.6549364613880743,
+            "t_utc": 1460919928,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713dfa501900f0961ce2d7b",
+            "moisture": 0.6539589442815249,
+            "t_utc": 1460920228,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713e0d001900f0961ce2d7c",
+            "moisture": 0.6539589442815249,
+            "t_utc": 1460920528,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713e1fd01900f0961ce2d7d",
+            "moisture": 0.6539589442815249,
+            "t_utc": 1460920828,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713e32801900f0961ce2d7e",
+            "moisture": 0.6529814271749755,
+            "t_utc": 1460921128,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713e45501900f0961ce2d7f",
+            "moisture": 0.6529814271749755,
+            "t_utc": 1460921428,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713e58101900f0961ce2d80",
+            "moisture": 0.6529814271749755,
+            "t_utc": 1460921728,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713e6ad01900f0961ce2d81",
+            "moisture": 0.6520039100684262,
+            "t_utc": 1460922028,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713e7d901900f0961ce2d82",
+            "moisture": 0.6520039100684262,
+            "t_utc": 1460922328,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713e90501900f0961ce2d83",
+            "moisture": 0.6520039100684262,
+            "t_utc": 1460922628,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713ea3101900f0961ce2d84",
+            "moisture": 0.6520039100684262,
+            "t_utc": 1460922928,
+            "type": "moisture"
+        },
+        {
+            "rssi": 64,
+            "_id": "5713eb5d01900f0961ce2d85",
+            "moisture": 0.6510263929618768,
+            "t_utc": 1460923228,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713ec8901900f0961ce2d86",
+            "moisture": 0.6510263929618768,
+            "t_utc": 1460923528,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "5713edb501900f0961ce2d87",
+            "moisture": 0.6510263929618768,
+            "t_utc": 1460923828,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5713eee101900f0961ce2d88",
+            "moisture": 0.6500488758553274,
+            "t_utc": 1460924128,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5713f00d01900f0961ce2d89",
+            "moisture": 0.6490713587487781,
+            "t_utc": 1460924428,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713f13901900f0961ce2d8a",
+            "moisture": 0.6490713587487781,
+            "t_utc": 1460924728,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713f26501900f0961ce2d8b",
+            "moisture": 0.6490713587487781,
+            "t_utc": 1460925028,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5713f39101900f0961ce2d8c",
+            "moisture": 0.6480938416422287,
+            "t_utc": 1460925328,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5713f4bd01900f0961ce2d8d",
+            "moisture": 0.6480938416422287,
+            "t_utc": 1460925628,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5713f5e901900f0961ce2d8e",
+            "moisture": 0.6480938416422287,
+            "t_utc": 1460925928,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5713f71501900f0961ce2d8f",
+            "moisture": 0.6480938416422287,
+            "t_utc": 1460926228,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713f84101900f0961ce2d90",
+            "moisture": 0.6471163245356794,
+            "t_utc": 1460926528,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713f96d01900f0961ce2d91",
+            "moisture": 0.6471163245356794,
+            "t_utc": 1460926828,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713fa9901900f0961ce2d92",
+            "moisture": 0.64613880742913,
+            "t_utc": 1460927128,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713fbc501900f0961ce2d93",
+            "moisture": 0.64613880742913,
+            "t_utc": 1460927428,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713fcf101900f0961ce2d94",
+            "moisture": 0.64613880742913,
+            "t_utc": 1460927728,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5713fe1d01900f0961ce2d95",
+            "moisture": 0.64613880742913,
+            "t_utc": 1460928028,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5713ff4901900f0961ce2d96",
+            "moisture": 0.6451612903225806,
+            "t_utc": 1460928329,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5714007501900f0961ce2d97",
+            "moisture": 0.6451612903225806,
+            "t_utc": 1460928629,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "571401a101900f0961ce2d98",
+            "moisture": 0.6451612903225806,
+            "t_utc": 1460928929,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "571402cd01900f0961ce2d99",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460929229,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "571403f901900f0961ce2d9a",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460929529,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5714052501900f0961ce2d9b",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460929829,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5714065201900f0961ce2d9c",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460930129,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "5714077d01900f0961ce2d9d",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460930429,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "571408aa01900f0961ce2d9e",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460930729,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "571409d501900f0961ce2d9f",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460931029,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "57140b0201900f0961ce2da0",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460931329,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "57140c2d01900f0961ce2da1",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460931629,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "57140d5901900f0961ce2da2",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460931929,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "57140e8501900f0961ce2da3",
+            "moisture": 0.6441837732160313,
+            "t_utc": 1460932229,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "57140fb101900f0961ce2da4",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460932529,
+            "type": "moisture"
+        },
+        {
+            "rssi": 65,
+            "_id": "571410dd01900f0961ce2da5",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460932829,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5714120901900f0961ce2da6",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460933129,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5714133501900f0961ce2da7",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460933429,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5714146101900f0961ce2da8",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460933729,
+            "type": "moisture"
+        },
+        {
+            "rssi": 66,
+            "_id": "5714158d01900f0961ce2da9",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460934029,
+            "type": "moisture"
+        },
+        {
+            "rssi": 72,
+            "_id": "571416b901900f0961ce2daa",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460934329,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "571417e601900f0961ce2dab",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460934629,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "5714191201900f0961ce2dac",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460934929,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57141a3e01900f0961ce2dad",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460935229,
+            "type": "moisture"
+        },
+        {
+            "rssi": 72,
+            "_id": "57141b6a01900f0961ce2dae",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460935529,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57141c9601900f0961ce2daf",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460935829,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57141dc201900f0961ce2db0",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460936129,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57141eed01900f0961ce2db1",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460936429,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714201901900f0961ce2db2",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460936729,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714214501900f0961ce2db3",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460937029,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714227201900f0961ce2db4",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460937329,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714239d01900f0961ce2db5",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460937629,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571424c901900f0961ce2db6",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460937929,
+            "type": "moisture"
+        },
+        {
+            "rssi": 72,
+            "_id": "571425f501900f0961ce2db7",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460938229,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714272201900f0961ce2db8",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460938529,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714284d01900f0961ce2db9",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460938829,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714297901900f0961ce2dba",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460939129,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57142aa501900f0961ce2dbb",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460939429,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57142bd201900f0961ce2dbc",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460939729,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57142cfd01900f0961ce2dbd",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460940029,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "57142e2a01900f0961ce2dbe",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460940329,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57142f5601900f0961ce2dbf",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460940629,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714308201900f0961ce2dc0",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460940929,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "571431ad01900f0961ce2dc1",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460941229,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "571432da01900f0961ce2dc2",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460941529,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714340501900f0961ce2dc3",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460941829,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714353101900f0961ce2dc4",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460942129,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714365d01900f0961ce2dc5",
+            "moisture": 0.6432062561094819,
+            "t_utc": 1460942429,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714378901900f0961ce2dc6",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460942729,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571438b501900f0961ce2dc7",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460943029,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571439e101900f0961ce2dc8",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460943329,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57143b0d01900f0961ce2dc9",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460943629,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57143c3901900f0961ce2dca",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460943929,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "57143d6501900f0961ce2dcb",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460944229,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "57143e9101900f0961ce2dcc",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460944529,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "57143fbd01900f0961ce2dcd",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460944829,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "571440e901900f0961ce2dce",
+            "moisture": 0.6422287390029325,
+            "t_utc": 1460945129,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714421601900f0961ce2dcf",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460945429,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714434201900f0961ce2dd0",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460945729,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714446e01900f0961ce2dd1",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460946029,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714459a01900f0961ce2dd2",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460946329,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "571446c601900f0961ce2dd3",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460946629,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "571447f201900f0961ce2dd4",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460946929,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714491e01900f0961ce2dd5",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460947229,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "57144a4a01900f0961ce2dd6",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460947529,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "57144b7601900f0961ce2dd7",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460947829,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57144ca201900f0961ce2dd8",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460948129,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57144dce01900f0961ce2dd9",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460948429,
+            "type": "moisture"
+        },
+        {
+            "rssi": 67,
+            "_id": "57144efa01900f0961ce2dda",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460948729,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714502601900f0961ce2ddb",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460949029,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714515201900f0961ce2ddc",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460949329,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714527e01900f0961ce2ddd",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460949629,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571453aa01900f0961ce2dde",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460949929,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "571454d601900f0961ce2ddf",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460950230,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714560201900f0961ce2de0",
+            "moisture": 0.6412512218963832,
+            "t_utc": 1460950530,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714572e01900f0961ce2de1",
+            "moisture": 0.6402737047898338,
+            "t_utc": 1460950830,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714585a01900f0961ce2de2",
+            "moisture": 0.6402737047898338,
+            "t_utc": 1460951130,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714598701900f0961ce2de3",
+            "moisture": 0.6402737047898338,
+            "t_utc": 1460951430,
+            "type": "moisture"
+        },
+        {
+            "rssi": 72,
+            "_id": "57145ab201900f0961ce2de4",
+            "moisture": 0.6402737047898338,
+            "t_utc": 1460951730,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57145bde01900f0961ce2de5",
+            "moisture": 0.6402737047898338,
+            "t_utc": 1460952030,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57145d0a01900f0961ce2de6",
+            "moisture": 0.6402737047898338,
+            "t_utc": 1460952330,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57145e3601900f0961ce2de7",
+            "moisture": 0.6402737047898338,
+            "t_utc": 1460952630,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57145f6201900f0961ce2de8",
+            "moisture": 0.6402737047898338,
+            "t_utc": 1460952930,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "5714608e01900f0961ce2de9",
+            "moisture": 0.6392961876832844,
+            "t_utc": 1460953230,
+            "type": "moisture"
+        },
+        {
+            "rssi": 72,
+            "_id": "571461ba01900f0961ce2dea",
+            "moisture": 0.6392961876832844,
+            "t_utc": 1460953530,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "571462e601900f0961ce2deb",
+            "moisture": 0.6392961876832844,
+            "t_utc": 1460953830,
+            "type": "moisture"
+        },
+        {
+            "rssi": 72,
+            "_id": "5714641201900f0961ce2dec",
+            "moisture": 0.6392961876832844,
+            "t_utc": 1460954130,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "5714653e01900f0961ce2ded",
+            "moisture": 0.6392961876832844,
+            "t_utc": 1460954430,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "5714666a01900f0961ce2dee",
+            "moisture": 0.6383186705767351,
+            "t_utc": 1460954730,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "5714679601900f0961ce2def",
+            "moisture": 0.6383186705767351,
+            "t_utc": 1460955030,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "571468c201900f0961ce2df0",
+            "moisture": 0.6383186705767351,
+            "t_utc": 1460955330,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "571469ee01900f0961ce2df1",
+            "moisture": 0.6383186705767351,
+            "t_utc": 1460955630,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57146b1a01900f0961ce2df2",
+            "moisture": 0.6383186705767351,
+            "t_utc": 1460955930,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57146c4701900f0961ce2df3",
+            "moisture": 0.6373411534701857,
+            "t_utc": 1460956230,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57146d7201900f0961ce2df4",
+            "moisture": 0.6373411534701857,
+            "t_utc": 1460956530,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57146e9f01900f0961ce2df5",
+            "moisture": 0.6373411534701857,
+            "t_utc": 1460956830,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "57146fca01900f0961ce2df6",
+            "moisture": 0.6363636363636364,
+            "t_utc": 1460957130,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571470f601900f0961ce2df7",
+            "moisture": 0.6363636363636364,
+            "t_utc": 1460957430,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "5714722201900f0961ce2df8",
+            "moisture": 0.6363636363636364,
+            "t_utc": 1460957730,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "5714734e01900f0961ce2df9",
+            "moisture": 0.6363636363636364,
+            "t_utc": 1460958030,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "5714747a01900f0961ce2dfa",
+            "moisture": 0.6363636363636364,
+            "t_utc": 1460958330,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "571475a601900f0961ce2dfb",
+            "moisture": 0.635386119257087,
+            "t_utc": 1460958630,
+            "type": "moisture"
+        },
+        {
+            "rssi": 71,
+            "_id": "571476d201900f0961ce2dfc",
+            "moisture": 0.635386119257087,
+            "t_utc": 1460958930,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571477fe01900f0961ce2dfd",
+            "moisture": 0.635386119257087,
+            "t_utc": 1460959230,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714792b01900f0961ce2dfe",
+            "moisture": 0.635386119257087,
+            "t_utc": 1460959530,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57147a5601900f0961ce2dff",
+            "moisture": 0.635386119257087,
+            "t_utc": 1460959830,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57147b8201900f0961ce2e00",
+            "moisture": 0.6344086021505376,
+            "t_utc": 1460960130,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57147cae01900f0961ce2e01",
+            "moisture": 0.6344086021505376,
+            "t_utc": 1460960430,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57147dda01900f0961ce2e02",
+            "moisture": 0.6334310850439883,
+            "t_utc": 1460960730,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57147f0601900f0961ce2e03",
+            "moisture": 0.6334310850439883,
+            "t_utc": 1460961030,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714803201900f0961ce2e04",
+            "moisture": 0.6334310850439883,
+            "t_utc": 1460961330,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714815e01900f0961ce2e05",
+            "moisture": 0.6324535679374389,
+            "t_utc": 1460961630,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714828a01900f0961ce2e06",
+            "moisture": 0.6324535679374389,
+            "t_utc": 1460961930,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571483b701900f0961ce2e07",
+            "moisture": 0.6314760508308895,
+            "t_utc": 1460962230,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571484e201900f0961ce2e08",
+            "moisture": 0.6314760508308895,
+            "t_utc": 1460962530,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714860f01900f0961ce2e09",
+            "moisture": 0.6314760508308895,
+            "t_utc": 1460962830,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714873b01900f0961ce2e0a",
+            "moisture": 0.6304985337243402,
+            "t_utc": 1460963130,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714886701900f0961ce2e0b",
+            "moisture": 0.6304985337243402,
+            "t_utc": 1460963430,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714899201900f0961ce2e0c",
+            "moisture": 0.6304985337243402,
+            "t_utc": 1460963730,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57148abf01900f0961ce2e0d",
+            "moisture": 0.6295210166177908,
+            "t_utc": 1460964030,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57148beb01900f0961ce2e0e",
+            "moisture": 0.6295210166177908,
+            "t_utc": 1460964330,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57148d1601900f0961ce2e0f",
+            "moisture": 0.6295210166177908,
+            "t_utc": 1460964630,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "57148e4301900f0961ce2e10",
+            "moisture": 0.6285434995112414,
+            "t_utc": 1460964930,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "57148f6e01900f0961ce2e11",
+            "moisture": 0.6285434995112414,
+            "t_utc": 1460965230,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714909b01900f0961ce2e12",
+            "moisture": 0.6285434995112414,
+            "t_utc": 1460965530,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "571491c601900f0961ce2e13",
+            "moisture": 0.6285434995112414,
+            "t_utc": 1460965830,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "571492f301900f0961ce2e14",
+            "moisture": 0.6275659824046921,
+            "t_utc": 1460966130,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714941f01900f0961ce2e15",
+            "moisture": 0.6275659824046921,
+            "t_utc": 1460966430,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714954b01900f0961ce2e16",
+            "moisture": 0.6275659824046921,
+            "t_utc": 1460966730,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714967701900f0961ce2e17",
+            "moisture": 0.6265884652981427,
+            "t_utc": 1460967030,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "571497a301900f0961ce2e18",
+            "moisture": 0.6265884652981427,
+            "t_utc": 1460967330,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "571498cf01900f0961ce2e19",
+            "moisture": 0.6265884652981427,
+            "t_utc": 1460967630,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "571499fb01900f0961ce2e1a",
+            "moisture": 0.6265884652981427,
+            "t_utc": 1460967930,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57149b2701900f0961ce2e1b",
+            "moisture": 0.6265884652981427,
+            "t_utc": 1460968230,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57149c5301900f0961ce2e1c",
+            "moisture": 0.6256109481915934,
+            "t_utc": 1460968530,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57149d7f01900f0961ce2e1d",
+            "moisture": 0.6256109481915934,
+            "t_utc": 1460968830,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "57149eab01900f0961ce2e1e",
+            "moisture": 0.624633431085044,
+            "t_utc": 1460969130,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "57149fd701900f0961ce2e1f",
+            "moisture": 0.624633431085044,
+            "t_utc": 1460969430,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714a10301900f0961ce2e20",
+            "moisture": 0.624633431085044,
+            "t_utc": 1460969730,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714a48701900f0961ce2e21",
+            "moisture": 0.6217008797653959,
+            "t_utc": 1460970630,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714a5b301900f0961ce2e22",
+            "moisture": 0.6217008797653959,
+            "t_utc": 1460970931,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714a6df01900f0961ce2e23",
+            "moisture": 0.6217008797653959,
+            "t_utc": 1460971231,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714a80b01900f0961ce2e24",
+            "moisture": 0.6207233626588465,
+            "t_utc": 1460971531,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714a93701900f0961ce2e25",
+            "moisture": 0.6197458455522972,
+            "t_utc": 1460971831,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714aa6301900f0961ce2e26",
+            "moisture": 0.6197458455522972,
+            "t_utc": 1460972131,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714ab8f01900f0961ce2e27",
+            "moisture": 0.6187683284457478,
+            "t_utc": 1460972431,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714acbb01900f0961ce2e28",
+            "moisture": 0.6187683284457478,
+            "t_utc": 1460972731,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714ade701900f0961ce2e29",
+            "moisture": 0.6177908113391984,
+            "t_utc": 1460973031,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714af1301900f0961ce2e2a",
+            "moisture": 0.6177908113391984,
+            "t_utc": 1460973331,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714b03f01900f0961ce2e2b",
+            "moisture": 0.6168132942326491,
+            "t_utc": 1460973631,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714b16b01900f0961ce2e2c",
+            "moisture": 0.6158357771260997,
+            "t_utc": 1460973931,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714b29701900f0961ce2e2d",
+            "moisture": 0.6158357771260997,
+            "t_utc": 1460974231,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714b3c301900f0961ce2e2e",
+            "moisture": 0.6148582600195504,
+            "t_utc": 1460974531,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714b4ef01900f0961ce2e2f",
+            "moisture": 0.6148582600195504,
+            "t_utc": 1460974831,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714b61b01900f0961ce2e30",
+            "moisture": 0.613880742913001,
+            "t_utc": 1460975131,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714b74701900f0961ce2e31",
+            "moisture": 0.613880742913001,
+            "t_utc": 1460975431,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714b87301900f0961ce2e32",
+            "moisture": 0.6129032258064516,
+            "t_utc": 1460975731,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714b9a001900f0961ce2e33",
+            "moisture": 0.6129032258064516,
+            "t_utc": 1460976031,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714bacb01900f0961ce2e34",
+            "moisture": 0.6129032258064516,
+            "t_utc": 1460976331,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714bbf701900f0961ce2e35",
+            "moisture": 0.6119257086999023,
+            "t_utc": 1460976631,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714bd2301900f0961ce2e36",
+            "moisture": 0.6119257086999023,
+            "t_utc": 1460976931,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714be4f01900f0961ce2e37",
+            "moisture": 0.6109481915933529,
+            "t_utc": 1460977231,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714bf7b01900f0961ce2e38",
+            "moisture": 0.6109481915933529,
+            "t_utc": 1460977531,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714c0a701900f0961ce2e39",
+            "moisture": 0.6099706744868035,
+            "t_utc": 1460977831,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714c1d301900f0961ce2e3a",
+            "moisture": 0.6089931573802542,
+            "t_utc": 1460978131,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714c30001900f0961ce2e3b",
+            "moisture": 0.6080156402737048,
+            "t_utc": 1460978431,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714c42b01900f0961ce2e3c",
+            "moisture": 0.6070381231671554,
+            "t_utc": 1460978731,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714c55801900f0961ce2e3d",
+            "moisture": 0.6070381231671554,
+            "t_utc": 1460979031,
+            "type": "moisture"
+        },
+        {
+            "rssi": 68,
+            "_id": "5714c68301900f0961ce2e3e",
+            "moisture": 0.6060606060606061,
+            "t_utc": 1460979331,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714c7af01900f0961ce2e3f",
+            "moisture": 0.6050830889540567,
+            "t_utc": 1460979631,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714c8db01900f0961ce2e40",
+            "moisture": 0.6050830889540567,
+            "t_utc": 1460979931,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714ca0801900f0961ce2e41",
+            "moisture": 0.6041055718475073,
+            "t_utc": 1460980231,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714cb3301900f0961ce2e42",
+            "moisture": 0.603128054740958,
+            "t_utc": 1460980531,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714cc6001900f0961ce2e43",
+            "moisture": 0.6021505376344086,
+            "t_utc": 1460980831,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714cd8b01900f0961ce2e44",
+            "moisture": 0.6011730205278593,
+            "t_utc": 1460981131,
+            "type": "moisture"
+        },
+        {
+            "rssi": 69,
+            "_id": "5714cfe301900f0961ce2e45",
+            "moisture": 0.5992179863147605,
+            "t_utc": 1460981731,
+            "type": "moisture"
+        },
+        {
+            "rssi": 70,
+            "_id": "5714d10f01900f0961ce2e46",
+            "moisture": 0.5982404692082112,
+            "t_utc": 1460982031,
+            "type": "moisture"
+        }
+    ],
+    "query": {
+        "start": "2016-04-17 00:00:00-04:00",
+        "type": "moisture",
+        "end": "2016-04-19 00:00:00-04:00"
+    }
+}
