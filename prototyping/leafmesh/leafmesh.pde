@@ -64,7 +64,7 @@ void setup() {
   
   println("");
   println("//HOW TO//");
-  println("D for debug mode");
+  println("D for enter debug mode");
   println("S for save all grids");
   println("R for enter ROTATE mode");
   println("L for enter SCALE mode");
