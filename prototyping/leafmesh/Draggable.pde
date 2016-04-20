@@ -20,8 +20,7 @@ class Draggable {
   
   // check if the user has moused over the (circular) object
   void CheckMouseOver(DraggableGrid grid) {
-    PVector mpos = grid.TransformToLocal(new PVector(mouseX, mouseY));//PVector.sub(new PVector(mouseX, mouseY), ref);
-    
+    PVector mpos = grid.TransformToLocal(new PVector(mouseX, mouseY));
     if ( sqrt((xpos-mpos.x)*(xpos-mpos.x) + (ypos-mpos.y)*(ypos-mpos.y)) < r ) {
       mouseOver = true;
       //println("Moused over.");
@@ -34,9 +33,8 @@ class Draggable {
   
   // check if the use has clicked the mouse while mousing over this object
   void CheckPressed(DraggableGrid grid) {
-    PVector mpos = grid.TransformToLocal(mouseX, mouseY);
-    
     if (mouseOver) {
+      PVector mpos = grid.TransformToLocal(mouseX, mouseY);
       grabbed = true;
       xOffset = mpos.x - (int)xpos;
       yOffset = mpos.y - (int)ypos;
