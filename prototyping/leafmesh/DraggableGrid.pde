@@ -21,7 +21,11 @@ class DraggableGrid extends ArrayList<Draggable> {
   String id;
   
   DataSource ds;
-  PVector currentDataEntry;
+  PVector currentDataEntry; // use this to visualize
+  
+  PVector center;
+  float scale;
+  float rotation;
   
   DraggableGrid() {
     bsplineDrawer = new BSplineDraw();
@@ -51,23 +55,52 @@ class DraggableGrid extends ArrayList<Draggable> {
     this.SetUpGridPoints();
   }
   
-  DraggableGrid(int gridWidth, int gridHeight, ArrayList<PVector> vectors, BoundingBox box, String background, String id) {
+  DraggableGrid(int gridWidth, int gridHeight, ArrayList<PVector> vectors, BoundingBox box, float scale, float rotation, String background, String id) {
     this();
     this.gridSize[0] = gridWidth;
     this.gridSize[1] = gridHeight;
     this.SetUpGridPoints(vectors);
+    this.box = box;
+    this.center = new PVector((this.box.x+this.box.w)/2, (this.box.y+this.box.h)/2);
+    this.scale = scale;
+    this.rotation = rotation;
     
     this.background = background;
     this.backgroundImage = loadImage("images/" + background);
-    this.box = box;
     this.id = id;
     
     this.ds = new DataSource("moisturedata.json");
   }
 
+//--- vector magic----------//
+  PVector TransformToGlobal(PVector p) {
+    return this.TransformToGlobal(p.x, p.y);
+  }
+  PVector TransformToGlobal(float x, float y) {
+    PVector q = new PVector(x, y);
+    q.setMag(q.mag()*this.scale);
+    q.rotate(this.rotation);
+    q.add(this.center);
+    return q;
+  }
+  
+  PVector TransformToLocal(PVector p) {
+    return this.TransformToLocal(p.x, p.y);
+  }
+  PVector TransformToLocal(float x, float y) {
+    PVector q = new PVector(x, y);
+    q.sub(this.center);
+    q.rotate(-this.rotation);
+    q.setMag(q.mag()/this.scale);
+    return q;
+  }
   
 //--- display functions ----------//
   void draw() {
+    pushMatrix();
+    translate(this.center.x, this.center.y);
+    rotate(this.rotation);
+    scale(this.scale);
     this.currentDataEntry = this.ds.getNext();
     if(debug) {
       this.DrawBackground();
@@ -76,27 +109,31 @@ class DraggableGrid extends ArrayList<Draggable> {
     this.DrawPolyLine();
     //this.DrawBezierCurve();
     if(debug) {
+      this.DrawAxes();
       this.DrawPoints();
     }
     this.DrawData();
     this.CheckMouseOver();
+    popMatrix();
   }
   
   void DrawData() {
     pushStyle();
     fill(255);
     textAlign(LEFT, TOP);
-    text(nf(this.currentDataEntry.y * 100, 2, 2) + "% humidity", this.box.x, this.box.y);
+    text(nf(this.currentDataEntry.y * 100, 2, 2) + "% humidity", 0, 0);
     text(nf(
       (this.currentDataEntry.x - this.ds.min.x)/60, 
       floor(log10((this.ds.max.x - this.ds.min.x)/60)) + 1, 
       2
-    ) + " minutes elapsed", this.box.x, this.box.y + fontSize);
+    ) + " minutes elapsed", 0, 0 + fontSize);
     popStyle();
   }
   
   void DrawBackground() {
-    image(this.backgroundImage, this.box.x, this.box.y, this.box.w, this.box.h);
+    pushStyle();
+    image(this.backgroundImage, -this.box.w/2, -this.box.h/2, this.box.w, this.box.h);
+    popStyle();
   }
     
   void DrawPoints() {
@@ -195,9 +232,20 @@ class DraggableGrid extends ArrayList<Draggable> {
     popStyle();
   }
   
+  void DrawAxes() {
+    int l = 100;
+    pushStyle();
+    stroke(0,0,255);
+    strokeWeight(5);
+    line(0, 0, l, 0);
+    stroke(255,0,0);
+    line(0, 0, 0, l);
+    popStyle();
+  }
+  
 //--- set functions ----------//
+  // place numberOfPoints objects in a regular grid
   void SetUpGridPoints() {
-  //place numberOfPoints objects in a regular grid
     float xSpacing = (width-2*pointRadius)/(this.gridSize[0]-1);
     float ySpacing = (height-2*pointRadius)/(this.gridSize[1]-1);
     float xpos = pointRadius;
@@ -218,48 +266,47 @@ class DraggableGrid extends ArrayList<Draggable> {
     }
   }
   
+  // add a point to the end of the point list
   void AddPoint(float xpos, float ypos) {
-  //add a point to the end of the point list
     this.add(new Circle(xpos,ypos,this.pointRadius));
   }
-
+  
+  // delete a point from the point list
   void DeletePoint(int index) {
-  //delete a point from the point list
     this.remove(index);
   }
-
   
 //--- mouse functions ----------//
   void CheckMouseOver() {
   // check if the user has moused over any (circular) objects
     for(int i=0; i<this.size(); ++i) {
-      this.get(i).CheckMouseOver();
+      this.get(i).CheckMouseOver(this);
     }
   }
-
-  void CheckPressed() {
+  
   // check if the use has clicked the mouse while mousing over this object
+  void CheckPressed() {
     for(int i=0; i<this.size(); ++i) {
-      this.get(i).CheckPressed();
+      this.get(i).CheckPressed(this);
     }
   }
-
+  
+  // move ball if it is being dragged
   void DragTopMostObject() {
-  //move ball if it is being dragged
     lastDraggedIndex = 0;
     
     //only drag the top-most object (top-most is at the end of the list)
     for(int i=1; i<this.size(); ++i) {
-      if(this.get(i).grabbed) {                      //if this index is grabbed
-        this.get(lastDraggedIndex).grabbed = false;  //forget the lower grabbed object 
-        lastDraggedIndex = i;                        //set this object as the one to drag
+      if(this.get(i).grabbed) {                     //if this index is grabbed
+        this.get(lastDraggedIndex).grabbed = false; //forget the lower grabbed object 
+        lastDraggedIndex = i;                       //set this object as the one to drag
       };
     }
-    this.get(lastDraggedIndex).Drag();               //drag the selected object
+    this.get(lastDraggedIndex).Drag(this);              //drag the selected object
   }
   
-  void Release() {
-  // when mouse button is released, un-grab the object  
+  // when mouse button is released, un-grab the object 
+  void Release() { 
     for(int i=0; i<this.size(); ++i) {
       this.get(i).Release();
     }

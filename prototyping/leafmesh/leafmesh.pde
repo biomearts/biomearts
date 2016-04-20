@@ -1,6 +1,6 @@
 import java.io.FilenameFilter;
 
-boolean debug = false;
+boolean debug = true;
 ArrayList<DraggableGrid> grids;
 int focus;
 
@@ -43,6 +43,8 @@ void setup() {
     String id = obj.getString("id");
     String background = obj.getString("background");
     JSONObject box = obj.getJSONObject("box");
+    float scale = obj.getFloat("scale");
+    float rotation = obj.getFloat("rotation");
     grids.add(new DraggableGrid(
       w, 
       h, 
@@ -53,10 +55,22 @@ void setup() {
         box.getFloat("width"), 
         box.getFloat("height")
       ), 
+      scale,
+      rotation,
       background, 
       id
     ));
   }
+  
+  println("");
+  println("//HOW TO//");
+  println("D for debug mode");
+  println("S for save all grids");
+  println("R for enter ROTATE mode");
+  println("L for enter SCALE mode");
+  println("[ for decrement");
+  println("] for increment");
+  println("");
 }
 
 void draw() {
@@ -91,6 +105,8 @@ void save() {
       box.setFloat("height", g.box.h);
       obj.setJSONObject("box", box);
     }
+    obj.setFloat("scale", g.scale);
+    obj.setFloat("rotation", g.rotation);
     obj.setInt("width", g.gridSize[0]);
     obj.setInt("height", g.gridSize[1]);
     
@@ -111,12 +127,33 @@ void save() {
   println("grid saved at " + fileName);
 }
 
+int mode = 0;
+
 void keyPressed() {
   if(keyCode == 68) { // toggle debug mode @D
     debug = !debug;
   }
   else if(keyCode == 83) { // save @S
     save();
+  }
+  else if(keyCode == 82) { // rotate @R
+    mode = Mode.ROTATE;
+    println("ROTATE");
+  }
+  else if(keyCode == 76) { // scale @L
+    mode = Mode.SCALE;
+    println("SCALE");
+  }
+  else if(keyCode == 91 || keyCode == 93) { // [
+    float delta = float(keyCode - 92)/20.0;
+    switch(mode) {
+      case Mode.ROTATE:
+        grids.get(focus).rotation += delta;
+        break;
+      case Mode.SCALE:
+        grids.get(focus).scale += delta;
+        break;
+    }
   }
 }
 
