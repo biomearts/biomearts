@@ -173,7 +173,7 @@ void keyPressed() {
   }
   else if(keyCode == 91 || keyCode == 93) { // [ & ]
     int dir = int(constrain(keyCode - 92, -1, 1));
-    float delta = float(dir)/20.0;
+    float delta = float(dir)/100.0;
     DraggableGrid grid = grids.get(focus);
     switch(mode.action) {
       case Mode.ROTATE:
