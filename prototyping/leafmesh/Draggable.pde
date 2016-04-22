@@ -62,6 +62,11 @@ class Draggable {
   
   // all draggables must have a display function
   void Display() {};
+  
+  // stringify
+  String toString() {
+    return "(" + this.xpos + "," + this.ypos + ")";
+  }
 }
 
 // this is a class for draggable cirlce objects

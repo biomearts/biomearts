@@ -63,14 +63,21 @@ void setup() {
   }
   
   println("");
-  println("//HOW TO//");
-  println("D for enter debug mode");
-  println("S for save all grids");
-  println("R for enter ROTATE mode");
-  println("L for enter SCALE mode");
-  println("[ for decrement");
-  println("] for increment");
-  println("");
+  println("//BASICS//");
+  println("D -> debug mode");
+  println("S -> save all grids");
+  println("//GRID MANIPULATION//");
+  println("\t       B");
+  println("\t       ↑     R");
+  println("\t  ┌─┬─┬─┬─┬─┐");
+  println("\t  ├─┼─┼─┼─┼─┤");
+  println("\tA←├─┼─┼─┼─┼─┤→X");
+  println("\t  ├─┼─┼─┼─┼─┤");
+  println("\t  └─┴─┴─┴─┴─┘");
+  println("\t       ↓");
+  println("\t       Y     S");
+  println("[ -> decrement");
+  println("] -> increment");
 }
 
 void draw() {
@@ -107,8 +114,8 @@ void save() {
     }
     obj.setFloat("scale", g.scale);
     obj.setFloat("rotation", g.rotation);
-    obj.setInt("width", g.gridSize[0]);
-    obj.setInt("height", g.gridSize[1]);
+    obj.setInt("width", g.gridSize.x);
+    obj.setInt("height", g.gridSize.y);
     
     JSONArray points = new JSONArray();
     for(int j = 0; j < g.size(); j++) {
@@ -127,7 +134,7 @@ void save() {
   println("grid saved at " + fileName);
 }
 
-int mode = 0;
+Mode mode = new Mode();
 
 void keyPressed() {
   if(keyCode == 68) { // toggle debug mode @D
@@ -137,21 +144,49 @@ void keyPressed() {
     save();
   }
   else if(keyCode == 82) { // rotate @R
-    mode = Mode.ROTATE;
+    mode.action = Mode.ROTATE;
     println("ROTATE");
   }
   else if(keyCode == 76) { // scale @L
-    mode = Mode.SCALE;
+    mode.action = Mode.SCALE;
     println("SCALE");
   }
-  else if(keyCode == 91 || keyCode == 93) { // [
-    float delta = float(keyCode - 92)/20.0;
-    switch(mode) {
+  else if(keyCode == 65) { // A
+    mode.action = Mode.HORIZONTAL;
+    mode.pos = Mode.BEGIN;
+    println("INSERT COL/DELETE FIRST COL");
+  }
+  else if(keyCode == 66) { // B
+    mode.action = Mode.VERTICAL;
+    mode.pos = Mode.BEGIN;
+    println("INSERT ROW/DELETE FIRST ROW");
+  }
+  else if(keyCode == 88) { // X
+    mode.action = Mode.HORIZONTAL;
+    mode.pos = Mode.END;
+    println("APPEND COL/DELETE LAST COL");
+  }
+  else if(keyCode == 89) { // Y
+    mode.action = Mode.VERTICAL;
+    mode.pos = Mode.END;
+    println("APPEND ROW/DELETE LAST ROW");
+  }
+  else if(keyCode == 91 || keyCode == 93) { // [ & ]
+    int dir = int(constrain(keyCode - 92, -1, 1));
+    float delta = float(dir)/20.0;
+    DraggableGrid grid = grids.get(focus);
+    switch(mode.action) {
       case Mode.ROTATE:
-        grids.get(focus).rotation += delta;
+        grid.rotation += delta;
         break;
       case Mode.SCALE:
-        grids.get(focus).scale += delta;
+        grid.scale += delta;
+        break;
+      case Mode.HORIZONTAL:
+        grid.Horizontal(mode.pos, dir);
+        break;
+      case Mode.VERTICAL:
+        grid.Vertical(mode.pos, dir);
         break;
     }
   }

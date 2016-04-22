@@ -2,7 +2,8 @@ class DraggableGrid extends ArrayList<Draggable> {
 // this class is a container for a grid of draggable circles
 //  it contains methods for drawing cubic b-splines created by the grid of circles
   
-  int[] gridSize;
+  //int[] gridSize;
+  IntVector gridSize;
   float pointRadius = 5.0;
   
   color polyLineColor;
@@ -27,38 +28,30 @@ class DraggableGrid extends ArrayList<Draggable> {
   float scale;
   float rotation;
   
+  PVector defaultSpacing;
+  
   DraggableGrid() {
-    bsplineDrawer = new BSplineDraw();
+    this.bsplineDrawer = new BSplineDraw();
     
-    polyLineColor = color(220,220,220);
-    bezierCurveColor = color(0,0,0);
-    polyLineWidth = 1.0;
-    bezierCurveWidth = 1.0;
+    this.polyLineColor = color(220,220,220);
+    this.bezierCurveColor = color(0,0,0);
+    this.polyLineWidth = 1.0;
+    this.bezierCurveWidth = 1.0;
     
-    lastDraggedIndex = 0;
-    xPt = new float[4];
-    yPt = new float[4];
-    colorPt = new color[4];
+    this.lastDraggedIndex = 0;
+    this.xPt = new float[4];
+    this.yPt = new float[4];
+    this.colorPt = new color[4];
     
-    gridSize = new int[2];
-    gridSize[0] = 5;
-    gridSize[1] = 5;
+    this.scale = 1.0;
+    this.rotation = 0;
     
-    background = null;
-    id = null;
+    this.defaultSpacing = new PVector(50, 50);
   }
   
-  DraggableGrid(int gridWidth, int gridHeight) {
+  DraggableGrid(int gw, int gh, ArrayList<PVector> vectors, BoundingBox box, float scale, float rotation, String background, String id) {
     this();
-    this.gridSize[0] = gridWidth;
-    this.gridSize[1] = gridHeight;
-    this.SetUpGridPoints();
-  }
-  
-  DraggableGrid(int gridWidth, int gridHeight, ArrayList<PVector> vectors, BoundingBox box, float scale, float rotation, String background, String id) {
-    this();
-    this.gridSize[0] = gridWidth;
-    this.gridSize[1] = gridHeight;
+    this.gridSize = new IntVector(gw,gh);
     this.SetUpGridPoints(vectors);
     this.box = box;
     this.center = new PVector((this.box.x+this.box.w)/2, (this.box.y+this.box.h)/2);
@@ -70,9 +63,11 @@ class DraggableGrid extends ArrayList<Draggable> {
     this.id = id;
     
     this.ds = new DataSource("moisturedata.json");
+    
+    println(this.gridSize);
   }
 
-//--- vector magic----------//
+//--- vector magic ----------//
   PVector TransformToGlobal(PVector p) {
     return this.TransformToGlobal(p.x, p.y);
   }
@@ -93,6 +88,45 @@ class DraggableGrid extends ArrayList<Draggable> {
     q.rotate(-this.rotation);
     q.setMag(q.mag()/this.scale);
     return q;
+  }
+  
+//--- manipulation functions -----//
+  void Horizontal(int pos, int dir) {
+    if(this.gridSize.x + dir < 2)
+      return;
+      
+    for(int i = this.gridSize.y; i > 0; i--) {
+      if(dir > 0) { // insert
+        int targetIndex = this.gridSize.x*(pos == Mode.BEGIN ? i-1 : i);
+        int referenceIndex = targetIndex + (pos == Mode.END ? -1 : 0);
+        Draggable reference = this.get(referenceIndex);
+        this.AddPoint(targetIndex, reference.xpos + pos*this.defaultSpacing.x, reference.ypos);
+      }
+      else { // delete
+        int targetIndex = this.gridSize.x*(pos == Mode.BEGIN ? i-1 : i) + (pos == Mode.END ? -1 : 0);
+        this.DeletePoint(targetIndex);
+      }
+    }
+    this.gridSize.x += dir;
+  }
+  
+  void Vertical(int pos, int dir) {
+    if(this.gridSize.y + dir < 2)
+      return;
+      
+    for(int i = this.gridSize.x; i > 0; i--) {
+      if(dir > 0) { // insert
+        int targetIndex = (pos == Mode.BEGIN ? 0 : this.size());
+        int referenceIndex = (pos == Mode.BEGIN ? this.gridSize.x - 1 : this.size() - this.gridSize.x);
+        Draggable reference = this.get(referenceIndex);
+        this.AddPoint(targetIndex, reference.xpos, reference.ypos + pos*this.defaultSpacing.y);
+      }
+      else { // delete
+        int targetIndex = (pos == Mode.BEGIN ? 0 : this.size() - 1);
+        this.DeletePoint(targetIndex);
+      }
+    }
+    this.gridSize.y += dir;
   }
   
 //--- display functions ----------//
@@ -154,22 +188,22 @@ class DraggableGrid extends ArrayList<Draggable> {
     //line(x1,y1,x2,y2);
     
     //draw vertical lines
-    for(int i=1; i<gridSize[1]; ++i) {
-      for(int j=0; j<gridSize[0]; ++j) {
-         line(this.get(j+(i-1)*gridSize[0]).xpos,
-              this.get(j+(i-1)*gridSize[0]).ypos,
-              this.get(j+i*gridSize[0]).xpos,
-              this.get(j+i*gridSize[0]).ypos);
-         //println("("+i+","+j+")" + "\t" + (j+(i-1)*gridSize[0]) + " to " + (j+i*gridSize[0]));
+    for(int i=1; i<gridSize.y; ++i) {
+      for(int j=0; j<gridSize.x; ++j) {
+         line(this.get(j+(i-1)*gridSize.x).xpos,
+              this.get(j+(i-1)*gridSize.x).ypos,
+              this.get(j+i*gridSize.x).xpos,
+              this.get(j+i*gridSize.x).ypos);
+         //println("("+i+","+j+")" + "\t" + (j+(i-1)*gridSize.x) + " to " + (j+i*gridSize.x));
       }
     }  
     //draw horizontal lines
-    for(int i=0; i<gridSize[1]; ++i) {
-      for(int j=1; j<gridSize[0]; ++j) {
-         line(this.get((j-1)+i*gridSize[0]).xpos,
-              this.get((j-1)+i*gridSize[0]).ypos,
-              this.get(j+i*gridSize[0]).xpos,
-              this.get(j+i*gridSize[0]).ypos);
+    for(int i=0; i<gridSize.y; ++i) {
+      for(int j=1; j<gridSize.x; ++j) {
+         line(this.get((j-1)+i*gridSize.x).xpos,
+              this.get((j-1)+i*gridSize.x).ypos,
+              this.get(j+i*gridSize.x).xpos,
+              this.get(j+i*gridSize.x).ypos);
       }
     }
     popStyle();
@@ -182,45 +216,45 @@ class DraggableGrid extends ArrayList<Draggable> {
     noStroke();
 
     /*
-     ---> j = 0..gridSize[0]
+     ---> j = 0..gridSize.x
     |          0,        1,     2,
     |  gS[0] + 0,  gS[0]+1,
     v 2gS[0] + 0, 2gS[0]+1,
-    i = 0..gridSize[1]
+    i = 0..gridSize.y
     
     idx = j+i*gS[0]
     */
   
-    if(gridSize[0]>4 && gridSize[1]>4) {
+    if(gridSize.x>4 && gridSize.y>4) {
       // draw vertical lines
-      for(int j=1; j<this.gridSize[0]-1; ++j) {
-        for(int i=3; i<this.gridSize[1]; ++i) {
-          xPt[0] = this.get(j+(i-3)*gridSize[0]).xpos;
-          xPt[1] = this.get(j+(i-2)*gridSize[0]).xpos;
-          xPt[2] = this.get(j+(i-1)*gridSize[0]).xpos;
-          xPt[3] = this.get(j+i*gridSize[0]).xpos;
+      for(int j=1; j<this.gridSize.x-1; ++j) {
+        for(int i=3; i<this.gridSize.y; ++i) {
+          xPt[0] = this.get(j+(i-3)*gridSize.x).xpos;
+          xPt[1] = this.get(j+(i-2)*gridSize.x).xpos;
+          xPt[2] = this.get(j+(i-1)*gridSize.x).xpos;
+          xPt[3] = this.get(j+i*gridSize.x).xpos;
           
-          yPt[0] = this.get(j+(i-3)*gridSize[0]).ypos;
-          yPt[1] = this.get(j+(i-2)*gridSize[0]).ypos;
-          yPt[2] = this.get(j+(i-1)*gridSize[0]).ypos;
-          yPt[3] = this.get(j+i*gridSize[0]).ypos;
+          yPt[0] = this.get(j+(i-3)*gridSize.x).ypos;
+          yPt[1] = this.get(j+(i-2)*gridSize.x).ypos;
+          yPt[2] = this.get(j+(i-1)*gridSize.x).ypos;
+          yPt[3] = this.get(j+i*gridSize.x).ypos;
             
           bsplineDrawer.DrawCubicBezier(xPt,yPt,bezierCurveWidth);
         }
       }
         
       // draw horizontal lines
-      for(int j=3; j<this.gridSize[0]; ++j) {
-        for(int i=1; i<this.gridSize[1]-1; ++i) {
-          xPt[0] = this.get((j-3)+i*gridSize[0]).xpos;
-          xPt[1] = this.get((j-2)+i*gridSize[0]).xpos;
-          xPt[2] = this.get((j-1)+i*gridSize[0]).xpos;
-          xPt[3] = this.get(j+i*gridSize[0]).xpos;
+      for(int j=3; j<this.gridSize.x; ++j) {
+        for(int i=1; i<this.gridSize.y-1; ++i) {
+          xPt[0] = this.get((j-3)+i*gridSize.x).xpos;
+          xPt[1] = this.get((j-2)+i*gridSize.x).xpos;
+          xPt[2] = this.get((j-1)+i*gridSize.x).xpos;
+          xPt[3] = this.get(j+i*gridSize.x).xpos;
           
-          yPt[0] = this.get((j-3)+i*gridSize[0]).ypos;
-          yPt[1] = this.get((j-2)+i*gridSize[0]).ypos;
-          yPt[2] = this.get((j-1)+i*gridSize[0]).ypos;
-          yPt[3] = this.get(j+i*gridSize[0]).ypos;
+          yPt[0] = this.get((j-3)+i*gridSize.x).ypos;
+          yPt[1] = this.get((j-2)+i*gridSize.x).ypos;
+          yPt[2] = this.get((j-1)+i*gridSize.x).ypos;
+          yPt[3] = this.get(j+i*gridSize.x).ypos;
             
           bsplineDrawer.DrawCubicBezier(xPt,yPt,bezierCurveWidth);
         }
@@ -246,13 +280,13 @@ class DraggableGrid extends ArrayList<Draggable> {
 //--- set functions ----------//
   // place numberOfPoints objects in a regular grid
   void SetUpGridPoints() {
-    float xSpacing = (width-2*pointRadius)/(this.gridSize[0]-1);
-    float ySpacing = (height-2*pointRadius)/(this.gridSize[1]-1);
+    float xSpacing = (width-2*pointRadius)/(this.gridSize.x-1);
+    float ySpacing = (height-2*pointRadius)/(this.gridSize.y-1);
     float xpos = pointRadius;
     float ypos = pointRadius;
-    for(int i=0; i<this.gridSize[1]; ++i) {
+    for(int i=0; i<this.gridSize.y; ++i) {
       xpos = pointRadius;
-      for(int j=0; j<this.gridSize[0]; ++j) {
+      for(int j=0; j<this.gridSize.x; ++j) {
         this.AddPoint(floor(xpos),floor(ypos));
         xpos += xSpacing; 
       }
@@ -269,6 +303,9 @@ class DraggableGrid extends ArrayList<Draggable> {
   // add a point to the end of the point list
   void AddPoint(float xpos, float ypos) {
     this.add(new Circle(xpos,ypos,this.pointRadius));
+  }
+  void AddPoint(int index, float xpos, float ypos) {
+    this.add(index, new Circle(xpos,ypos,this.pointRadius)); 
   }
   
   // delete a point from the point list
