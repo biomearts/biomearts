@@ -1,0 +1,61 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+<script>
+
+$(function() {
+	var url = 'https://spreadsheets.google.com/feeds/list/1AUTKQvm0-cZtzZAOUE75DQm_KZJRRL5AzUEHaf4wEdM/od6/public/values?alt=json';
+	var $google = $('#google');
+	var $list = $('<ul>').appendTo($google);
+	$.get(url, function(data) {
+		for(var i = 0; i < data.feed.entry.length; i++) {
+			var entry = data.feed.entry[i];
+			var date = entry['gsx$date']['$t'];
+			var outlet = entry['gsx$outlet']['$t'];
+			var link = entry['gsx$link']['$t'];
+			var title = entry['gsx$title']['$t'];
+
+			var $item = $('<li>').appendTo($list);
+			var $mainLink = $('<a>').addClass('article').attr({href: link, target: '_new'}).html(title).appendTo($item);
+			var $outlet = $('<span>').addClass('by').html(outlet).appendTo($item).after('<span>, </span>');
+			var $date = $('<time>').html(date).appendTo($item);
+		}
+	});
+});
+
+</script>
+<style>
+
+#google ul {
+	margin: 2em 0;
+	padding: 0;
+}
+#google ul > li {
+	box-sizing: border-box;
+	display: inline-block;
+	width: 50%;
+	padding: 1em 1.5em;
+	vertical-align: top;
+}
+#google ul > li > .article {
+	display: block;
+	font-family: "Apercu", sans-serif;
+	font-size: 2em;
+	line-height: 1.25em;
+	margin: 4px 0;
+}
+#google ul > li > .by,
+#google ul > li > time {
+	display: inline-block;
+}
+
+@media (min-width: 1024px) {
+	#google ul > li {
+		width: 33.3%;
+	}
+}
+@media (max-width: 520px) {
+	#google ul > li {
+		width: auto;
+	}
+}
+
+</style>

@@ -1,0 +1,32 @@
+<script>
+
+var html = '<div id="twitterWrapper"><a class="twitter-timeline" href="https://twitter.com/BiomeArts" data-widget-id="724445428297560064" data-chrome="nofooter noheader noborders" width="400" height="300"></a></div>';
+
+document.addEventListener("DOMContentLoaded", function() {
+	document.getElementsByTagName('body')[0].insertAdjacentHTML('beforeend', html);
+	!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+});
+
+</script>
+<style>
+
+#twitterWrapper {
+	position: absolute;
+	bottom: 24px;
+	right: 24px;
+	z-index: 999; /* z-index of mobile menu is 1000 */
+	max-width: 400px;
+	height: 300px;
+}
+
+@media (max-width: 520px) {
+	#twitterWrapper {
+		max-width: calc(100% - 48px);
+		height: 220px;
+	}
+	#twitterWrapper > iframe {
+		height: 220px !important;
+	}
+}
+
+</style>
