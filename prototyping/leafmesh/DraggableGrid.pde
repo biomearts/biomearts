@@ -57,7 +57,7 @@ class DraggableGrid extends ArrayList<Draggable> {
     this.gridSize = new IntVector(gw, gh);
     this.SetUpGridPoints(vectors);
     this.box = box;
-    this.center = new PVector((this.box.x+this.box.w)/2, (this.box.y+this.box.h)/2);
+    this.center = new PVector(this.box.x+this.box.w/2, this.box.y+this.box.h/2);
     this.scale = scale;
     this.rotation = rotation;
 
@@ -138,7 +138,7 @@ class DraggableGrid extends ArrayList<Draggable> {
     //draw all the objects in the set
     pushStyle();
     strokeWeight(1);
-    for (int i=0; i<this.size (); ++i) {
+    for (int i=0; i<this.size(); ++i) {
       this.get(i).Display();
     }
     popStyle();
@@ -353,6 +353,8 @@ class DraggableGrid extends ArrayList<Draggable> {
 
   void Move() {
     this.center = new PVector(mouseX - this.dragOffset.x, mouseY - this.dragOffset.y);
+    this.box.x = this.center.x - this.box.w/2;
+    this.box.y = this.center.y - this.box.h/2;
   }
 
   // when mouse button is released, un-grab the object
