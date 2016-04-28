@@ -1,6 +1,6 @@
 class DraggableGrid extends ArrayList<Draggable> {
-  // this class is a container for a grid of draggable circles
-  //  it contains methods for drawing cubic b-splines created by the grid of circles
+// this class is a container for a grid of draggable circles
+// it contains methods for drawing cubic b-splines created by the grid of circles
 
   //int[] gridSize;
   IntVector gridSize;
@@ -10,8 +10,10 @@ class DraggableGrid extends ArrayList<Draggable> {
   color bezierCurveColor;
   float polyLineWidth;
   float bezierCurveWidth;
-  int lastDraggedIndex;  // index of the last draggable object to be selected
-  float[] xPt, yPt;
+
+  PVector dragOffset;
+  int dragLast;  // index of the last draggable object to be selected
+  float[] xPt,yPt;
   color[] colorPt;
 
   BSplineDraw bsplineDrawer;
@@ -33,12 +35,13 @@ class DraggableGrid extends ArrayList<Draggable> {
   DraggableGrid() {
     this.bsplineDrawer = new BSplineDraw();
 
-    this.polyLineColor = color(220, 220, 220);
-    this.bezierCurveColor = color(0, 0, 0);
+    this.polyLineColor = color(220,220,220);
+    this.bezierCurveColor = color(0,0,0);
     this.polyLineWidth = 1.0;
     this.bezierCurveWidth = 1.0;
 
-    this.lastDraggedIndex = 0;
+    this.dragOffset = new PVector(0,0);
+    this.dragLast = -1;
     this.xPt = new float[4];
     this.yPt = new float[4];
     this.colorPt = new color[4];
@@ -90,44 +93,7 @@ class DraggableGrid extends ArrayList<Draggable> {
     return q;
   }
 
-  //--- manipulation functions -----//
-  void Horizontal(int pos, int dir) {
-    if (this.gridSize.x + dir < 2)
-      return;
-
-    for (int i = this.gridSize.y; i > 0; i--) {
-      if (dir > 0) { // insert
-        int targetIndex = this.gridSize.x*(pos == Mode.BEGIN ? i-1 : i);
-        int referenceIndex = targetIndex + (pos == Mode.END ? -1 : 0);
-        Draggable reference = this.get(referenceIndex);
-        this.AddPoint(targetIndex, reference.xpos + pos*this.defaultSpacing.x, reference.ypos);
-      } else { // delete
-        int targetIndex = this.gridSize.x*(pos == Mode.BEGIN ? i-1 : i) + (pos == Mode.END ? -1 : 0);
-        this.DeletePoint(targetIndex);
-      }
-    }
-    this.gridSize.x += dir;
-  }
-
-  void Vertical(int pos, int dir) {
-    if (this.gridSize.y + dir < 2)
-      return;
-
-    for (int i = this.gridSize.x; i > 0; i--) {
-      if (dir > 0) { // insert
-        int targetIndex = (pos == Mode.BEGIN ? 0 : this.size());
-        int referenceIndex = (pos == Mode.BEGIN ? this.gridSize.x - 1 : this.size() - this.gridSize.x);
-        Draggable reference = this.get(referenceIndex);
-        this.AddPoint(targetIndex, reference.xpos, reference.ypos + pos*this.defaultSpacing.y);
-      } else { // delete
-        int targetIndex = (pos == Mode.BEGIN ? 0 : this.size() - 1);
-        this.DeletePoint(targetIndex);
-      }
-    }
-    this.gridSize.y += dir;
-  }
-
-  //--- display functions ----------//
+//--- display functions ----------//
   void draw() {
     pushMatrix();
     translate(this.center.x, this.center.y);
@@ -155,10 +121,10 @@ class DraggableGrid extends ArrayList<Draggable> {
     textAlign(LEFT, TOP);
     text(nf(this.currentDataEntry.y * 100, 2, 2) + "% humidity", 0, 0);
     text(nf(
-    (this.currentDataEntry.x - this.ds.min.x)/60, 
-    floor(log10((this.ds.max.x - this.ds.min.x)/60)) + 1, 
-    2
-      ) + " minutes elapsed", 0, 0 + fontSize);
+      (this.currentDataEntry.x - this.ds.min.x)/60,
+      floor(log10((this.ds.max.x - this.ds.min.x)/60)) + 1,
+      2
+    ) + " minutes elapsed", 0, 0 + fontSize);
     popStyle();
   }
 
@@ -188,34 +154,21 @@ class DraggableGrid extends ArrayList<Draggable> {
     //draw vertical lines
     for (int i=1; i<gridSize.y; ++i) {
       for (int j=0; j<gridSize.x; ++j) {
-        line(this.get(j+(i-1)*gridSize.x).xpos, 
-        this.get(j+(i-1)*gridSize.x).ypos, 
-        this.get(j+i*gridSize.x).xpos, 
+        line(this.get(j+(i-1)*gridSize.x).xpos,
+        this.get(j+(i-1)*gridSize.x).ypos,
+        this.get(j+i*gridSize.x).xpos,
         this.get(j+i*gridSize.x).ypos);
         //println("("+i+","+j+")" + "\t" + (j+(i-1)*gridSize.x) + " to " + (j+i*gridSize.x));
       }
-    }  
+    }
     //draw one horizontal line through the middle;
-    //println(gridSize.y);
-    //println(gridSize.x);
-    //int i=2;
     int i = gridSize.y/2;
     for (int j=1; j<gridSize.x; ++j) {
-      line(this.get((j-1)+i*gridSize.x).xpos, 
-      this.get((j-1)+i*gridSize.x).ypos, 
-      this.get(j+i*gridSize.x).xpos, 
+      line(this.get((j-1)+i*gridSize.x).xpos,
+      this.get((j-1)+i*gridSize.x).ypos,
+      this.get(j+i*gridSize.x).xpos,
       this.get(j+i*gridSize.x).ypos);
     }
-    //*the old one* the turtle grid;
-    //    //draw horizontal lines
-    //    for(int i=0; i<gridSize.y; ++i) {
-    //      for(int j=1; j<gridSize.x; ++j) {
-    //         line(this.get((j-1)+i*gridSize.x).xpos,
-    //              this.get((j-1)+i*gridSize.x).ypos,
-    //              this.get(j+i*gridSize.x).xpos,
-    //              this.get(j+i*gridSize.x).ypos);
-    //      }
-    //    }
     popStyle();
   }
 
@@ -231,7 +184,7 @@ class DraggableGrid extends ArrayList<Draggable> {
      |  gS[0] + 0,  gS[0]+1,
      v 2gS[0] + 0, 2gS[0]+1,
      i = 0..gridSize.y
-     
+
      idx = j+i*gS[0]
      */
 
@@ -249,7 +202,7 @@ class DraggableGrid extends ArrayList<Draggable> {
           yPt[2] = this.get(j+(i-1)*gridSize.x).ypos;
           yPt[3] = this.get(j+i*gridSize.x).ypos;
 
-          bsplineDrawer.DrawCubicBezier(xPt, yPt, bezierCurveWidth);
+          bsplineDrawer.DrawCubicBezier(xPt,yPt,bezierCurveWidth);
         }
       }
 
@@ -266,7 +219,7 @@ class DraggableGrid extends ArrayList<Draggable> {
           yPt[2] = this.get((j-1)+i*gridSize.x).ypos;
           yPt[3] = this.get(j+i*gridSize.x).ypos;
 
-          bsplineDrawer.DrawCubicBezier(xPt, yPt, bezierCurveWidth);
+          bsplineDrawer.DrawCubicBezier(xPt,yPt,bezierCurveWidth);
         }
       }
     } else {
@@ -286,7 +239,7 @@ class DraggableGrid extends ArrayList<Draggable> {
     popStyle();
   }
 
-  //--- set functions ----------//
+//--- set functions ----------//
   // place numberOfPoints objects in a regular grid
   void SetUpGridPoints() {
     float xSpacing = (width-2*pointRadius)/(this.gridSize.x-1);
@@ -295,8 +248,8 @@ class DraggableGrid extends ArrayList<Draggable> {
     float ypos = pointRadius;
     for (int i=0; i<this.gridSize.y; ++i) {
       xpos = pointRadius;
-      for (int j=0; j<this.gridSize.x; ++j) {
-        this.AddPoint(floor(xpos), floor(ypos));
+      for(int j=0; j<this.gridSize.x; ++j) {
+        this.AddPoint(floor(xpos),floor(ypos));
         xpos += xSpacing;
       }
       ypos += ySpacing;
@@ -309,12 +262,50 @@ class DraggableGrid extends ArrayList<Draggable> {
     }
   }
 
+  void InsertRow(int pos, int dir) {
+    if(this.gridSize.x + dir < 2)
+      return;
+
+    for(int i = this.gridSize.y; i > 0; i--) {
+      if(dir > 0) { // insert
+        int targetIndex = this.gridSize.x*(pos == Mode.BEGIN ? i-1 : i);
+        int referenceIndex = targetIndex + (pos == Mode.END ? -1 : 0);
+        Draggable reference = this.get(referenceIndex);
+        this.AddPoint(targetIndex, reference.xpos + pos*this.defaultSpacing.x, reference.ypos);
+      }
+      else { // delete
+        int targetIndex = this.gridSize.x*(pos == Mode.BEGIN ? i-1 : i) + (pos == Mode.END ? -1 : 0);
+        this.DeletePoint(targetIndex);
+      }
+    }
+    this.gridSize.x += dir;
+  }
+
+  void InsertCol(int pos, int dir) {
+    if(this.gridSize.y + dir < 2)
+      return;
+
+    for(int i = this.gridSize.x; i > 0; i--) {
+      if(dir > 0) { // insert
+        int targetIndex = (pos == Mode.BEGIN ? 0 : this.size());
+        int referenceIndex = (pos == Mode.BEGIN ? this.gridSize.x - 1 : this.size() - this.gridSize.x);
+        Draggable reference = this.get(referenceIndex);
+        this.AddPoint(targetIndex, reference.xpos, reference.ypos + pos*this.defaultSpacing.y);
+      }
+      else { // delete
+        int targetIndex = (pos == Mode.BEGIN ? 0 : this.size() - 1);
+        this.DeletePoint(targetIndex);
+      }
+    }
+    this.gridSize.y += dir;
+  }
+
   // add a point to the end of the point list
   void AddPoint(float xpos, float ypos) {
     this.add(new Circle(xpos, ypos, this.pointRadius));
   }
   void AddPoint(int index, float xpos, float ypos) {
-    this.add(index, new Circle(xpos, ypos, this.pointRadius));
+    this.add(index, new Circle(xpos,ypos,this.pointRadius));
   }
 
   // delete a point from the point list
@@ -322,38 +313,51 @@ class DraggableGrid extends ArrayList<Draggable> {
     this.remove(index);
   }
 
-  //--- mouse functions ----------//
+//--- mouse functions ----------//
+  // check if the user has moused over any (circular) objects
   void CheckMouseOver() {
-    // check if the user has moused over any (circular) objects
-    for (int i=0; i<this.size (); ++i) {
+    for(int i=0; i<this.size(); ++i) {
       this.get(i).CheckMouseOver(this);
     }
   }
 
   // check if the use has clicked the mouse while mousing over this object
   void CheckPressed() {
-    for (int i=0; i<this.size (); ++i) {
-      this.get(i).CheckPressed(this);
+    boolean flag = false;
+    for(int i=0; i<this.size(); ++i) {
+      flag = flag || this.get(i).CheckPressed(this);
+    }
+    if(!flag) {
+      this.dragOffset = new PVector(mouseX - this.center.x, mouseY - this.center.y);
     }
   }
 
   // move ball if it is being dragged
   void DragTopMostObject() {
-    lastDraggedIndex = 0;
+    this.dragLast = -1;
 
-    //only drag the top-most object (top-most is at the end of the list)
-    for (int i=1; i<this.size (); ++i) {
-      if (this.get(i).grabbed) {                     //if this index is grabbed
-        this.get(lastDraggedIndex).grabbed = false; //forget the lower grabbed object 
-        lastDraggedIndex = i;                       //set this object as the one to drag
-      };
+    for(int i = 0; i < this.size(); i++) {
+      if(this.get(i).grabbed) {
+        if(this.dragLast > -1)
+          this.get(this.dragLast).grabbed = false;
+        this.dragLast = i;
+      }
     }
-    this.get(lastDraggedIndex).Drag(this);              //drag the selected object
+    if(this.dragLast > -1) {
+      this.get(this.dragLast).Move(this);
+    }
+    else {
+      this.Move();
+    }
   }
 
-  // when mouse button is released, un-grab the object 
-  void Release() { 
-    for (int i=0; i<this.size (); ++i) {
+  void Move() {
+    this.center = new PVector(mouseX - this.dragOffset.x, mouseY - this.dragOffset.y);
+  }
+
+  // when mouse button is released, un-grab the object
+  void Release() {
+    for(int i=0; i<this.size(); ++i) {
       this.get(i).Release();
     }
   }
@@ -363,4 +367,3 @@ class DraggableGrid extends ArrayList<Draggable> {
     this.SetUpGridPoints();
   }
 }
-

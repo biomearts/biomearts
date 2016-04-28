@@ -9,7 +9,7 @@ int fontSize;
 
 void setup() {
   frameRate(30);
-  size(900, 900, "processing.core.PGraphicsRetina2D"); // for retina dispaly
+  size(900, 600, "processing.core.PGraphicsRetina2D"); // for retina dispaly
   //pixelDensity(2); // Processing 3
   font = loadFont("Akkurat-Mono-48.vlw");
   fontSize = 12;
@@ -47,18 +47,18 @@ void setup() {
     float scale = obj.getFloat("scale");
     float rotation = obj.getFloat("rotation");
     grids.add(new DraggableGrid(
-    w, 
-    h, 
-    vectors, 
+    w,
+    h,
+    vectors,
     new BoundingBox(
-    box.getFloat("x"), 
-    box.getFloat("y"), 
-    box.getFloat("width"), 
+    box.getFloat("x"),
+    box.getFloat("y"),
+    box.getFloat("width"),
     box.getFloat("height")
-      ), 
-    scale, 
-    rotation, 
-    background, 
+      ),
+    scale,
+    rotation,
+    background,
     id
       ));
   }
@@ -76,7 +76,7 @@ void setup() {
   println("\t  ├─┼─┼─┼─┼─┤");
   println("\t  └─┴─┴─┴─┴─┘");
   println("\t       ↓");
-  println("\t       Y     S");
+  println("\t       Y     L");
   println("[ -> decrement");
   println("] -> increment");
 }
@@ -89,8 +89,8 @@ void draw() {
 }
 
 String getDateTime() { // get current datetime for data file name
-  return 
-    nf(year(), 4) + "-" + nf(month(), 2) + "-" + nf(day(), 2) + "T" + 
+  return
+    nf(year(), 4) + "-" + nf(month(), 2) + "-" + nf(day(), 2) + "T" +
     nf(hour(), 2) + "-" + nf(minute(), 2) + "-" + nf(second(), 2);
 }
 void save() {
@@ -169,18 +169,18 @@ void keyPressed() {
     float delta = float(dir)/100.0;
     DraggableGrid grid = grids.get(focus);
     switch(mode.action) {
-    case Mode.ROTATE:
-      grid.rotation += delta;
-      break;
-    case Mode.SCALE:
-      grid.scale += delta;
-      break;
-    case Mode.HORIZONTAL:
-      grid.Horizontal(mode.pos, dir);
-      break;
-    case Mode.VERTICAL:
-      grid.Vertical(mode.pos, dir);
-      break;
+      case Mode.ROTATE:
+        grid.rotation += delta;
+        break;
+      case Mode.SCALE:
+        grid.scale += delta;
+        break;
+      case Mode.HORIZONTAL:
+        grid.InsertRow(mode.pos, dir);
+        break;
+      case Mode.VERTICAL:
+        grid.InsertCol(mode.pos, dir);
+        break;
     }
   }
 }
@@ -188,9 +188,9 @@ void keyPressed() {
 void mousePressed() {
   if (mouseButton == LEFT) {   // left click to drag points drag
     grids.get(focus).CheckPressed();
-  }                                                   
+  }
   if (mouseButton == RIGHT) {  // right click to reset control point grid
-    grids.get(focus).ResetGrid();
+    //grids.get(focus).ResetGrid();
   }
 }
 
@@ -201,4 +201,3 @@ void mouseDragged() {
 void mouseReleased() {
   grids.get(focus).Release();
 }
-

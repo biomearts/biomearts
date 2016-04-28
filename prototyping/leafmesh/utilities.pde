@@ -34,4 +34,9 @@ class Mode {
   int action = 0;
   int pos = 0;
 }
-
+void _(int n) {
+  println(frameCount + ":" + n);
+}
+void _(String str) {
+  println(frameCount + ":" + str);
+}
