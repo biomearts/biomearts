@@ -69,14 +69,14 @@ void setup() {
   println("S -> save all grids");
   println("//GRID MANIPULATION//");
   println("\t       B");
-  println("\t       ↑     R");
+  println("\t       ↑     [R]otate");
   println("\t  ┌─┬─┬─┬─┬─┐");
   println("\t  ├─┼─┼─┼─┼─┤");
   println("\tA←├─┼─┼─┼─┼─┤→X");
   println("\t  ├─┼─┼─┼─┼─┤");
   println("\t  └─┴─┴─┴─┴─┘");
   println("\t       ↓");
-  println("\t       Y     L");
+  println("\t       Y     Sca[L]e");
   println("[ -> decrement");
   println("] -> increment");
 }
