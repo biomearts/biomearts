@@ -47,20 +47,20 @@ void setup() {
     float scale = obj.getFloat("scale");
     float rotation = obj.getFloat("rotation");
     grids.add(new DraggableGrid(
-    w,
-    h,
-    vectors,
-    new BoundingBox(
-    box.getFloat("x"),
-    box.getFloat("y"),
-    box.getFloat("width"),
-    box.getFloat("height")
+      w,
+      h,
+      vectors,
+      new BoundingBox(
+        box.getFloat("x"),
+        box.getFloat("y"),
+        box.getFloat("width"),
+        box.getFloat("height")
       ),
-    scale,
-    rotation,
-    background,
-    id
-      ));
+      scale,
+      rotation,
+      background,
+      id
+    ));
   }
 
   println("");
@@ -186,11 +186,8 @@ void keyPressed() {
 }
 
 void mousePressed() {
-  if (mouseButton == LEFT) {   // left click to drag points drag
+  if(mouseButton == LEFT) {   // left click to drag points drag
     grids.get(focus).CheckPressed();
-  }
-  if (mouseButton == RIGHT) {  // right click to reset control point grid
-    //grids.get(focus).ResetGrid();
   }
 }
 
