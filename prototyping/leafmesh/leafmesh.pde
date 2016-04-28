@@ -31,13 +31,13 @@ void setup() {
   println("grid loaded from " + targetDataFile);
 
   // initialize grids from file
-  for (int i = 0; i < data.size (); i++) {
+  for (int i = 0; i < data.size(); i++) {
     JSONObject obj = data.getJSONObject(i);
     int w = obj.getInt("width");
     int h = obj.getInt("height");
     JSONArray points = obj.getJSONArray("points");
     ArrayList<PVector> vectors = new ArrayList<PVector>();
-    for (int j = 0; j < points.size (); j++) {
+    for (int j = 0; j < points.size(); j++) {
       JSONArray p = points.getJSONArray(j);
       vectors.add(new PVector(p.getFloat(0), p.getFloat(1)));
     }
@@ -88,16 +88,11 @@ void draw() {
   }
 }
 
-String getDateTime() { // get current datetime for data file name
-  return
-    nf(year(), 4) + "-" + nf(month(), 2) + "-" + nf(day(), 2) + "T" +
-    nf(hour(), 2) + "-" + nf(minute(), 2) + "-" + nf(second(), 2);
-}
 void save() {
   // construct JSON array from grids
   JSONArray data = new JSONArray();
 
-  for (int i = 0; i < grids.size (); i++) {
+  for (int i = 0; i < grids.size(); i++) {
     DraggableGrid g = grids.get(i);
 
     JSONObject obj = new JSONObject();
@@ -119,7 +114,7 @@ void save() {
     obj.setInt("height", g.gridSize.y);
 
     JSONArray points = new JSONArray();
-    for (int j = 0; j < g.size (); j++) {
+    for (int j = 0; j < g.size(); j++) {
       JSONArray p = new JSONArray();
       p.setFloat(0, g.get(j).xpos);
       p.setFloat(1, g.get(j).ypos);
@@ -130,7 +125,7 @@ void save() {
     data.setJSONObject(i, obj);
   }
   // save data to file
-  String fileName = getDateTime() + ".json";
+  String fileName = getUTCTime() + ".json";
   saveJSONArray(data, "data/grids/" + fileName, null);
   println("grid saved at " + fileName);
 }

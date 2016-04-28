@@ -1,3 +1,6 @@
+import java.util.Calendar;
+import java.util.TimeZone;
+
 // functions
 float log10 (float x) {
   return (log(x) / log(10));
@@ -39,4 +42,8 @@ void _(int n) {
 }
 void _(String str) {
   println(frameCount + ":" + str);
+}
+String getUTCTime() { // get current datetime for data file name
+  Calendar c = Calendar.getInstance(TimeZone.getTimeZone("UTC"));
+  return String.valueOf(c.getTimeInMillis());
 }
