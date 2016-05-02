@@ -120,11 +120,13 @@ class DraggableGrid extends ArrayList<Draggable> {
     fill(255);
     textAlign(LEFT, TOP);
     text(nf(this.currentDataEntry.y * 100, 2, 2) + "% humidity", 0, 0);
-    text(nf(
-      (this.currentDataEntry.x - this.ds.min.x)/60,
-      floor(log10((this.ds.max.x - this.ds.min.x)/60)) + 1,
-      2
-    ) + " minutes elapsed", 0, 0 + fontSize);
+    text(
+      nf((this.currentDataEntry.x - this.ds.min.x)/60,
+        floor(log10((this.ds.max.x - this.ds.min.x)/60)) + 1,
+        2) + " minutes elapsed",
+      0,
+      0 + fontSize
+    );
     popStyle();
   }
 
@@ -144,6 +146,12 @@ class DraggableGrid extends ArrayList<Draggable> {
     popStyle();
   }
 
+  void DrawLine(int p, int q) {
+    Draggable dp = this.get(p);
+    Draggable dq = this.get(q);
+    line(dp.xpos, dp.ypos, dq.xpos, dq.ypos); // todo: draw gradient here
+  }
+
   void DrawPolyLine() {
     //draw lines between sequential pairs of points
     pushStyle();
@@ -154,20 +162,13 @@ class DraggableGrid extends ArrayList<Draggable> {
     //draw vertical lines
     for (int i=1; i<gridSize.y; ++i) {
       for (int j=0; j<gridSize.x; ++j) {
-        line(this.get(j+(i-1)*gridSize.x).xpos,
-        this.get(j+(i-1)*gridSize.x).ypos,
-        this.get(j+i*gridSize.x).xpos,
-        this.get(j+i*gridSize.x).ypos);
-        //println("("+i+","+j+")" + "\t" + (j+(i-1)*gridSize.x) + " to " + (j+i*gridSize.x));
+        this.DrawLine(j+(i-1)*gridSize.x, j+i*gridSize.x);
       }
     }
-    //draw one horizontal line through the middle;
+    //draw one horizontal line through the middle
     int i = gridSize.y/2;
     for (int j=1; j<gridSize.x; ++j) {
-      line(this.get((j-1)+i*gridSize.x).xpos,
-      this.get((j-1)+i*gridSize.x).ypos,
-      this.get(j+i*gridSize.x).xpos,
-      this.get(j+i*gridSize.x).ypos);
+      this.DrawLine((j-1)+i*gridSize.x, j+i*gridSize.x);
     }
     popStyle();
   }
