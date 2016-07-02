@@ -37,18 +37,48 @@
 	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02404e4b0eeba8772b459/1440752644182/Apercu-Medium.eot') format('embedded-opentype'),
 	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e0240be4b0eeba8772b464/1440752651909/Apercu-Medium.woff') format('woff'),
 	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e02412e4b0eeba8772b46d/1440752658282/Apercu-Medium.ttf')  format('truetype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Apercu';
+	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57701fb8f5e231ddf3c9dc1e/1466965944631/Apercu-Regular.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57701fd3f5e231ddf3c9dda3/1466965971620/Apercu-Regular.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57701fd0f5e231ddf3c9dd65/1466965969010/Apercu-Regular.ttf')  format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: 'Apercu';
+	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57701ff93e00bed84f0d078f/1466966009546/Apercu-Italic.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57701ffe3e00bed84f0d07a3/1466966014744/Apercu-Italic.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57701ffc3e00bed84f0d07a2/1466966012934/Apercu-Italic.ttf')  format('truetype');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Apercu';
+	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/5770203db3db2bd35f6847a1/1466966077741/Apercu-Bold.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57702042b3db2bd35f6847c7/1466966082276/Apercu-Bold.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57702040b3db2bd35f6847a3/1466966080448/Apercu-Bold.ttf')  format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Apercu';
+	src: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57702057b3db2bd35f684845/1466966103566/Apercu-BoldItalic.eot') format('embedded-opentype'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/5770205bb3db2bd35f684871/1466966107383/Apercu-BoldItalic.woff') format('woff'),
+	url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57702059b3db2bd35f68486e/1466966105646/Apercu-BoldItalic.ttf')  format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
 /*End of font-face declaration*/
 
 body {
 	font-family: "Input Mono", sans-serif;
 	font-size: 12px;
-	letter-spacing: 0;
-}
-p, a, ul li, span, h1, h2, h3, h4, h5, h6 {
-	font-family: "Input Mono", sans-serif;
 	letter-spacing: 0;
 }
 h1, h2, h3, h4, h5, h6 {
@@ -63,7 +93,7 @@ input, textarea {
 }
 
 /* specific elements */
-.social-twitter {
+#sqs-social {
 	display: none;
 }
 .collection-detail-wrapper {
@@ -108,8 +138,8 @@ body:not(.collection-type-index):not(.collection-type-gallery) #headerWrapper {
 	overflow: visible;
 }
 #logo .logo a {
-	font-family: "Apercu", "Futura", sans-serif;
-	font-weight: normal;
+	font-family: "Apercu", sans-serif;
+	font-weight: 500;
 	font-size: 48px;
 	letter-spacing: 0.25em;
 }
@@ -128,8 +158,10 @@ background: rgba(255, 255, 255, 0.25);
 /*Top-level items*/
 #topNav .main-nav>.nav-wrapper>ul>li>a,
 #topNav .main-nav>.nav-wrapper>ul>li.folder>.folder-parent>a {
+	font-family: "Input Mono", sans-serif;
 	font-size: 12px;
 	font-weight: normal;
+	letter-spacing: 0;
 }
 #topNav .main-nav>.nav-wrapper>ul>li>a>span,
 #topNav .main-nav>.nav-wrapper>ul>li.folder>.folder-parent>a>span {
@@ -162,7 +194,9 @@ body.collection-type-index .color-weight-dark #mobile-navigation .active-link la
 }
 #topNav .folder .folder-child-wrapper ul.folder-child li a {
 	width: 10em;
+	font-family: "Input Mono", sans-serif;
 	font-size: 12px;
+	letter-spacing: 0;
 }
 #topNav .main-nav ul.folder-child>li>a>span {
 	border: 1px solid transparent;
