@@ -193,7 +193,8 @@ body.collection-type-index .color-weight-dark #mobile-navigation .active-link la
 	transform: translateX(-50%);
 }
 #topNav .folder .folder-child-wrapper ul.folder-child li a {
-	width: 10em;
+	width: auto;
+	min-width: 10em;
 	font-family: "Input Mono", sans-serif;
 	font-size: 12px;
 	letter-spacing: 0;

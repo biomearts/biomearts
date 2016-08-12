@@ -10,12 +10,14 @@ $(function() {
 			var entry = data.feed.entry[i];
 			var date = entry['gsx$date']['$t'];
 			var outlet = entry['gsx$outlet']['$t'];
+			var author = entry['gsx$author']['$t'];
 			var link = entry['gsx$link']['$t'];
 			var title = entry['gsx$title']['$t'];
 
 			var $item = $('<li>').appendTo($list);
 			var $mainLink = $('<a>').addClass('article').attr({href: link, target: '_new'}).html(title).appendTo($item);
-			var $outlet = $('<span>').addClass('by').html(outlet).appendTo($item).after('<span>, </span>');
+			var $author = $('<span>').addClass('by').html(author).appendTo($item).after('<span>, </span>');
+			var $outlet = $('<span>').addClass('at').html(outlet).appendTo($item).after('<span>, </span>');
 			var $date = $('<time>').html(date).appendTo($item);
 		}
 	});
@@ -43,6 +45,7 @@ $(function() {
 	margin: 4px 0;
 }
 #google ul > li > .by,
+#google ul > li > .at,
 #google ul > li > time {
 	display: inline-block;
 }
