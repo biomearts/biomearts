@@ -127,6 +127,14 @@ body:not(.collection-type-index):not(.collection-type-gallery) #headerWrapper {
 	background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e155fce4b0e3927f7eaa1e/1440830972826/the-build.png');
 	background-size: cover;
 }
+.code-block #the-build-2-house {
+	display: block;
+	width: 46.67px;
+	height: 50px;
+	margin: 5rem auto 1.5rem;
+	background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57b117646a4963e7a40f08b7/1471223652136/the-build-2-house.png');
+	background-size: cover;
+}
 
 /*Logo*/
 #logo {
