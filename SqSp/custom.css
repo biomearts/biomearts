@@ -125,7 +125,9 @@ body:not(.collection-type-index):not(.collection-type-gallery) #headerWrapper {
 	height: 100px;
 	margin: 50px auto 25px;
 	background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/55e155fce4b0e3927f7eaa1e/1440830972826/the-build.png');
-	background-size: cover;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 .code-block #the-build-2-house {
 	display: block;
@@ -133,7 +135,19 @@ body:not(.collection-type-index):not(.collection-type-gallery) #headerWrapper {
 	height: 50px;
 	margin: 5rem auto 1.5rem;
 	background-image: url('http://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57b117646a4963e7a40f08b7/1471223652136/the-build-2-house.png');
-	background-size: cover;
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.code-block #the-build-2 {
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 50px auto 25px;
+	background-image: url('https://static1.squarespace.com/static/5261cecfe4b0696c720a18c1/t/57f64773f5e2311b1e567393/1475757939900/the-build-2.png');
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 /*Logo*/
